@@ -45,9 +45,7 @@ class FrontController extends Controller
 
     public function homePage() {
         // danh mục đặc biệt
-        $categoriesSpecial = CategorySpecial::query()->with(['tours' => function($q) {
-            $q->where('tours.status', Tour::XUAT_BAN);
-        }, 'tours.image'])
+        $categoriesSpecial = CategorySpecial::query()
             ->where('show_home_page', 1)
             ->orderBy('order_number')->get();
 
@@ -55,20 +53,11 @@ class FrontController extends Controller
         $categoryParents = Category::with([
             'childs' => function($q) {
                 $q->where('show_home_page', 1);
-            },
-            'childs.tours' => function ($q2) {
-                $q2->where('status', Tour::XUAT_BAN)->orderBy('created_at', 'desc');
             }
         ])->where([
             'show_home_page' => 1,
             'parent_id' => 0
         ])->get();
-
-        foreach ($categoryParents as $category) {
-            $category->tours = $category->childs->flatMap(function($child) {
-                return $child->tours;
-            });
-        }
 
         // thư viện ảnh
         $galleries = Gallery::query()->with(['image'])->latest()->get();

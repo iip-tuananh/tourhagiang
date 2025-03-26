@@ -605,15 +605,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="text-center mt-4 mt-lg-0">
-                      <button class="btn btn-has-icon btn-primary section-btn-vr" type="button">
-                        <span class="btn-icon">
-                          <svg class="iconsvg-vr-glasses">
-                            <use xlink:href="/htmlv2/images/sprite.svg#vr-glasses"></use>
-                          </svg>
-                        </span>Watch VR TOUR
-                      </button>
-                    </div> -->
                 </div>
             </section>
 
@@ -695,12 +686,8 @@
                     $("#booking_service_input").val(service);
                 })
             </script>
-            });
-
-            </script>
         </div>
     </div>
-
 @endsection
 
 

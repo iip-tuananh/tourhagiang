@@ -1,10 +1,11 @@
 <header class="header header-headroom " id="header">
     <nav class="header-navbar navbar navbar-expand-lg" id="navbar">
         <div class="container">
-            <a class="header-logo" href="https://avanaretreat.com/vn">
-                <svg class="iconsvg-avana">
-                    <use xlink:href="/htmlv2/images/sprite.svg#avana"></use>
-                </svg>
+            <a class="header-logo" href="{{route('front.home-page')}}">
+                {{-- <svg class="iconsvg-avana">
+                    <use xlink:href="{{$config->image->path}}"></use>
+                </svg> --}}
+                <img src="{{$config->image->path}}" alt="{{$config->image->name}}">
             </a>
             <button class="navbar-toggle hamburger hamburger--slider d-lg-none" id="navbar-toggle">
         <span class="hamburger-box d-block">
@@ -12,17 +13,18 @@
         </span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-collapse">
-                <a class="navbar-logo d-lg-none" href="/">
-                    <svg class="iconsvg-avana">
-                        <use xlink:href="/htmlv2/images/sprite.svg#avana"></use>
-                    </svg>
+                <a class="navbar-logo d-lg-none" href="{{route('front.home-page')}}">
+                    {{-- <svg class="iconsvg-avana">
+                        <use xlink:href="{{$config->image->path}}"></use>
+                    </svg> --}}
+                    <img src="{{$config->image->path}}" alt="{{$config->image->name}}">
                 </a>
                 <button class="navbar-close btn d-lg-none" id="navbar-close">
                     <i class="icont-close"></i>
                 </button>
                 <ul class="navbar-nav w-100" id="navbar-nav">
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/hang-phong">Hạng phòng</a>
+                        <a class="nav-link " href="{{route('front.room-category')}}">Hạng phòng</a>
                     </li>
                     <li class="nav-item  ">
                         <a class="nav-link " href="/vn/spa">ORCHID SPA</a>
@@ -69,10 +71,10 @@
                     </li>
 
                     <li class="nav-item dropdown dropdown-language d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#">vn</a>
+                        <a class="nav-link dropdown-toggle" href="#">Ngôn ngữ</a>
                         <div class="dropdown-menu dropdown-menu-end">
-                            <a class="nav-link " href="https://avanaretreat.com">en</a>
-                            <a class="nav-link active" href="https://avanaretreat.com/vn">vn</a>
+                            <a class="nav-link " href="javascript:void(0)" onclick="translateheader('en')">Tiếng anh</a>
+                            <a class="nav-link active" href="javascript:void(0)" onclick="translateheader('vi')">Tiếng việt</a>
                         </div>
                     </li>
                 </ul>

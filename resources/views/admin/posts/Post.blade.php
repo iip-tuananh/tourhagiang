@@ -41,15 +41,19 @@
         get submit_data() {
             let data = new FormData();
 
-            data.append('name', this.name);
-            data.append('cate_id', this.cate_id);
-            data.append('intro', this.intro);
-            data.append('body', this.body);
-            data.append('status', this.status);
+            safeAppend(data, 'name', this.name);
+            safeAppend(data, 'cate_id', this.cate_id);
+            safeAppend(data, 'intro', this.intro);
+            safeAppend(data, 'body', this.body);
+            safeAppend(data, 'status', this.status);
+
+            let image = this.image.submit_data;
+            if (image) data.append('image', image);
 
             this.blocks.forEach((block, bIndex) => {
+                data.append(`blocks[${bIndex}][code]`, 'block-'+bIndex);
                 data.append(`blocks[${bIndex}][title]`, block.title);
-                data.append(`blocks[${bIndex}][content]`, block.content);
+                data.append(`blocks[${bIndex}][body]`, block.body);
 
                 block.galleries.forEach((g, gIndex) => {
                     if (g.id) {

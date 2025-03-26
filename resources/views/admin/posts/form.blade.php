@@ -38,7 +38,7 @@
     }
 </style>
 <div class="row">
-	<div class="col-md-9 col-sm-8 col-xs-12">
+	<div class="col-md-8 col-sm-8 col-xs-12">
 		<div class="form-group custom-group mb-4">
             <label class="form-label required-label">Danh mục</label>
             <ui-select class="" remove-selected="true" ng-model="form.cate_id" theme="select2">
@@ -52,6 +52,14 @@
             <span class="invalid-feedback d-block" role="alert">
                 <strong><% errors.cate_id[0] %></strong>
             </span>
+        </div>
+
+        <div class="form-group custom-group mb-4">
+            <label class="form-label required-label">Tiêu đề bài viết</label>
+            <input class="form-control" ng-model="form.name" type="text">
+            <span class="invalid-feedback d-block" role="alert">
+				<strong><% errors.name[0] %></strong>
+			</span>
         </div>
 
         <ul class="nav nav-tabs" id="blockTabs" role="tablist">
@@ -92,12 +100,9 @@
                 <!-- Input nội dung -->
                 <div class="form-group">
                     <label for="content<% $index + 1 %>">Nội dung:</label>
-                    <textarea name="blocks[<% $index + 1 %>][content]"
-                              id="content<% $index + 1 %>"
-                              rows="4"
-                              class="form-control"
-                              placeholder="Nhập nội dung"
-                              ng-model="block.content"></textarea>
+                    <textarea name="blocks[<% $index + 1 %>][body]"  id="content<% $index + 1 %>" class="form-control"
+                              ck-editor ng-model="block.body" rows="7"></textarea>
+
                 </div>
 
                 <!-- Thư viện ảnh -->
@@ -148,7 +153,7 @@
         </div>
 	</div>
 
-	<div class="col-md-3 col-sm-4 col-xs-12">
+	<div class="col-md-4 col-sm-4 col-xs-12">
 		<div class="form-group custom-group mb-4">
 			<label class="form-label required-label">Trạng thái</label>
 			<select id="my-select" class="form-control custom-select" ng-model="form.status">
@@ -156,25 +161,34 @@
 				<option ng-repeat="s in form.statuses" ng-value="s.id" ng-selected="form.status == s.id"><% s.name %></option>
 			</select>
 		</div>
-		<div class="form-group text-center mb-4">
-			<div class="main-img-preview">
-				<p class="help-block-img">* Ảnh định dạng: jpg, png không quá 2MB.</p>
-				<img class="thumbnail img-preview" ng-src="<% form.image.path %>">
-			</div>
-			<div class="input-group" style="width: 100%; text-align: center">
-				<div class="input-group-btn" style="margin: 0 auto">
-					<div class="fileUpload fake-shadow cursor-pointer">
-						<label class="mb-0" for="<% form.image.element_id %>">
-							<i class="glyphicon glyphicon-upload"></i> Chọn ảnh
-						</label>
-						<input class="d-none" id="<% form.image.element_id %>" type="file" class="attachment_upload" accept=".jpg,.jpeg,.png">
-					</div>
-				</div>
-			</div>
-			<span class="invalid-feedback d-block" role="alert">
+
+        <div class="card mb-4">
+            <div class="card-header text-center ">
+                <h5>Banner</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group text-center mb-4">
+                    <div class="main-img-preview">
+                        <p class="help-block-img">* Ảnh banner định dạng: jpg, png không quá 10MB.</p>
+                        <img class="thumbnail img-preview" ng-src="<% form.image.path %>">
+                    </div>
+                    <div class="input-group" style="width: 100%; text-align: center">
+                        <div class="input-group-btn" style="margin: 0 auto">
+                            <div class="fileUpload fake-shadow cursor-pointer">
+                                <label class="mb-0" for="<% form.image.element_id %>">
+                                    <i class="glyphicon glyphicon-upload"></i> Chọn ảnh
+                                </label>
+                                <input class="d-none" id="<% form.image.element_id %>" type="file" class="attachment_upload" accept=".jpg,.jpeg,.png">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="invalid-feedback d-block" role="alert">
 				<strong><% errors.image[0] %></strong>
 			</span>
-		</div>
+                </div>
+            </div>
+        </div>
+
 
 	</div>
 </div>

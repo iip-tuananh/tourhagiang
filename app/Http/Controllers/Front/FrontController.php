@@ -93,27 +93,14 @@ class FrontController extends Controller
                         ->orderBy('sort', 'ASC');
                 }])->get();
         return view('site.hang_phong', compact('rooms'));
+    }
 
-        $categorySpecial = CategorySpecial::findBySlug($slug);
+    public function cuisine(Request $request, $slug) {
+        $categoryPost = PostCategory::findBySlug($slug);
+        $post = Post::query()->with(['image', 'blocks.galleries.image'])
+            ->where('cate_id', $categoryPost->id)->first();
 
-        if($categorySpecial) {
-            $tours = $categorySpecial->tours()->where('status', Tour::XUAT_BAN)->latest()->paginate(10);
-            $category = $categorySpecial;
-        } else {
-            if($childSlug) {
-                $childCategory = Category::findBySlug($childSlug);
-                $tours = Tour::query()->where(['status' => 1, 'cate_id' => $childCategory->id])->latest()->paginate(10);
-                $category = $childCategory;
-            } else {
-                $categoryParent = Category::findBySlug($slug);
-                $child_categories = $this->categoryService->getChildCategory($categoryParent, 1);
-                $tours = Tour::query()->whereIn('cate_id', $child_categories->pluck('id')->toArray())
-                    ->where('status', Tour::XUAT_BAN)->latest()->paginate(10);
-                $category = $categoryParent;
-            }
-        }
-
-        return view('site.hang_phong', compact('tours', 'category'));
+        return view('site.am_thuc', compact('post'));
     }
 
     public function searchTour(Request $request) {

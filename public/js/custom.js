@@ -154,6 +154,10 @@ function jsonToFormData(data) {
     return formData;
 }
 
+function safeAppend(formData, key, value) {
+    formData.append(key, value !== undefined && value !== null ? value : '');
+}
+
 function findType(arr, type) {
     return arr.find(val => val.id == type);
 }

@@ -20,9 +20,10 @@ Chỉnh sửa bài viết
 @section('script')
 @include('admin.posts.Post')
 <script>
-  app.controller('Post', function ($scope, $http) {
+  app.controller('Post', function ($scope, $http, $timeout) {
     $scope.form = new Post(@json($object), {scope: $scope});
     $scope.loading = {};
+    @include('admin.posts.formJs')
 
     $scope.submit = function(publish = 0) {
       $scope.loading.submit = true;

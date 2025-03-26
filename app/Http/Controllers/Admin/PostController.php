@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Admin\Block;
+use App\Model\Admin\BlockGallery;
 use App\Model\Admin\Post;
 use Illuminate\Http\Request;
 use App\Model\Admin\Post as ThisModel;
@@ -85,11 +87,14 @@ class PostController extends Controller
 		$validate = Validator::make(
 			$request->all(),
 			[
-//				'cate_id' => 'required|exists:post_categories,id',
+				'cate_id' => 'required|exists:post_categories,id|unique:posts,cate_id',
+                'name' => 'required',
 				'status' => 'required|in:0,1',
-				// 'intro' => 'nullable|max:255',
-//				'image' => 'required|file|mimes:jpg,jpeg,png|max:2000'
-			]
+				'image' => 'required|file|mimes:jpg,jpeg,png|max:10000'
+			],
+            [
+                'cate_id.unique' => 'Đã tồn tại bài viết thuộc danh mục này.',
+            ]
 		);
 		$json = new stdClass();
 
@@ -99,23 +104,32 @@ class PostController extends Controller
             $json->message = "Thao tác thất bại!";
             return Response::json($json);
 		}
-//        $blocks = json_decode($request->input('blocks'), true);
 
-        dd($request->all());
 		DB::beginTransaction();
 		try {
 			$object = new ThisModel();
 			$object->cate_id = $request->cate_id;
 			$object->name = $request->name;
-			$object->intro = $request->intro;
-			$object->body = $request->body;
 			$object->status = $request->status;
 			$object->save();
 
-			// FileHelper::uploadFile($request->image, 'posts', $object->id, ThisModel::class, 'image', 3);
 			FileHelper::uploadFileToCloudflare($request->image, $object->id, ThisModel::class, 'image');
 
-			// if ($request->publish == 1 && $object->status == 1) $object->send();
+            // blocks
+            foreach ($request->blocks as $block) {
+                $objBlock = new Block();
+                $objBlock->code = $block['code'];
+                $objBlock->title = $block['title'] ?? '';
+                $objBlock->body = $block['body'] ?? '';
+                $objBlock->blockable_id = $object->id;
+                $objBlock->blockable_type = Post::class;
+                $objBlock->save();
+
+                if(@$block['galleries']) {
+                    $objBlock->syncGalleries($block['galleries']);
+                }
+
+            }
 
 			DB::commit();
 			$json->success = true;
@@ -123,6 +137,7 @@ class PostController extends Controller
 			return Response::json($json);
 		} catch (Exception $e) {
             DB::rollBack();
+            Log::error($e);
             throw new Exception($e->getMessage());
         }
 	}
@@ -130,6 +145,7 @@ class PostController extends Controller
 	public function edit(Request $request,$id)
 	{
 		$object = ThisModel::getDataForEdit($id);
+
 		return view($this->view.'.edit', compact('object'));
 	}
 
@@ -147,12 +163,13 @@ class PostController extends Controller
 		$validate = Validator::make(
 			$request->all(),
 			[
-				'cate_id' => 'required|exists:post_categories,id',
+                'cate_id' => [
+                    'required',
+                    Rule::unique('posts', 'cate_id')->ignore($id),
+                ],
 				'name' => 'required|unique:posts,name,'.$id,
 				'status' => 'required|in:0,1',
-				// 'intro' => 'nullable|max:255',
-				'body' => 'required',
-				'image' => 'nullable|file|mimes:jpg,jpeg,png|max:2000'
+				'image' => 'nullable|file|mimes:jpg,jpeg,png|max:10000',
 			]
 		);
 
@@ -170,23 +187,36 @@ class PostController extends Controller
 		try {
 			$object = ThisModel::findOrFail($id);
 
-			$object->cate_id = $request->cate_id;
-			$object->name = $request->name;
-			$object->intro = $request->intro;
-			$object->body = $request->body;
-			$object->status = $request->status;
-			$object->save();
 
-			if ($request->image) {
+            $object->cate_id = $request->cate_id;
+            $object->name = $request->name;
+            $object->status = $request->status;
+            $object->save();
+
+            if ($request->image) {
                 if($object->image) {
-                    // FileHelper::forceDeleteFiles($object->image->id, $object->id, ThisModel::class, 'image');
                     FileHelper::deleteFileFromCloudflare($object->image, $object->id, ThisModel::class, 'image');
                 }
-				// FileHelper::uploadFile($request->image, 'posts', $object->id, ThisModel::class, 'image', 3);
-				FileHelper::uploadFileToCloudflare($request->image, $object->id, ThisModel::class, 'image');
-			}
+                FileHelper::uploadFileToCloudflare($request->image, $object->id, ThisModel::class, 'image');
+            }
 
-			// if ($request->publish == 1 && $object->status == 1) $object->send();
+            // blocks
+            foreach ($request->blocks as $block) {
+                $objBlock = Block::query()->where('code', $block['code'])
+                    ->where('blockable_id', $object->id)
+                    ->where('blockable_type', Post::class)
+                    ->first();
+                $objBlock->title = $block['title'] ?? null;
+                $objBlock->body = $block['body'] ?? null;
+                $objBlock->blockable_id = $object->id;
+                $objBlock->blockable_type = Post::class;
+                $objBlock->save();
+
+                if(@$block['galleries']) {
+                    $objBlock->syncGalleries($block['galleries']);
+                }
+
+            }
 
 			DB::commit();
 			$json->success = true;

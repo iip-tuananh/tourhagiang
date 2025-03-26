@@ -38,6 +38,9 @@
     @stack('scripts')
     <script src="/site/js/vendors.js"></script>
 
+    @include('site.partials.footer')
+
+
 </body>
 
 </html>

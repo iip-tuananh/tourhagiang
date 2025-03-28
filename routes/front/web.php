@@ -2,10 +2,10 @@
 
 Route::group(['namespace' => 'Front'], function () {
     Route::get('/','FrontController@homePage')->name('front.home-page');
-    Route::get('/room-category','FrontController@roomCategory')->name('front.room-category');
-    Route::get('/cuisine/{slug}','FrontController@cuisine')->name('front.cuisine');
-    Route::get('/spa','FrontController@spa')->name('front.spa');
-    Route::get('/cloud-pool','FrontController@cloudPool')->name('front.cloudPool');
+    Route::get('/hang_phong.html','FrontController@roomCategory')->name('front.room-category');
+    Route::get('/am_thuc/{slug}.html','FrontController@cuisine')->name('front.cuisine');
+    Route::get('/spa.html','FrontController@spa')->name('front.spa');
+    Route::get('/cloud-pool.html','FrontController@cloudPool')->name('front.cloudPool');
 
 
 

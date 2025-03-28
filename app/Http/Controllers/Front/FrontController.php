@@ -68,9 +68,6 @@ class FrontController extends Controller
         // thư viện ảnh
         $galleries = Gallery::query()->with(['image'])->latest()->get();
 
-        // nhân viên hỗ trợ
-        $supportsStaff = Partner::query()->with(['image'])->get();
-
         $banners = Banner::query()->with('image')->latest()->get();
 
         $newBlogs = Post::with(['image'])->where(['status'=>1])
@@ -84,7 +81,23 @@ class FrontController extends Controller
                 ->orderBy('sort', 'ASC');
         }])->get();
 
-        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'supportsStaff', 'banners', 'newBlogs', 'listRoom'));
+        $cuisines = Post::query()->with(['image', 'blocks.galleries.image'])
+        ->where('status', Post::XUAT_BAN)
+        ->get();
+
+        $promotionService = Service::query()->with(['image', 'galleries.image'])
+            ->where('status', 1)
+            ->whereHas('serviceType', function($q) {
+                $q->where('type', ServiceType::UU_DAI);
+            })->inRandomOrder()->get();
+
+        $resortService = Service::query()->with(['image', 'galleries.image'])
+            ->where('status', 1)
+            ->whereHas('serviceType', function($q) {
+                $q->where('type', ServiceType::GOI_NGHI_DUONG);
+            })->inRandomOrder()->get();
+
+        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'banners', 'newBlogs', 'listRoom', 'cuisines', 'promotionService', 'resortService'));
     }
 
     public function roomCategory(Request $request) {

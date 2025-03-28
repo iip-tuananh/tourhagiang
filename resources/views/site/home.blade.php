@@ -18,6 +18,25 @@
                 height: 100%;
             }
         }
+
+        @media (min-width: 768px) {
+            #section-hero .banner-slider .swiper-button-next,
+            #section-hero .banner-slider .swiper-button-prev {
+                display: none;
+                background-color: #fff;
+                padding: 0.5rem;
+            }
+
+            #section-hero .banner-slider .swiper-button-next i,
+            #section-hero .banner-slider .swiper-button-prev i {
+                color: #000;
+            }
+
+            #section-hero .banner-slider:hover .swiper-button-next,
+            #section-hero .banner-slider:hover .swiper-button-prev {
+                display: block;
+            }
+        }
     </style>
 @endsection
 
@@ -43,6 +62,12 @@
                                     alt="{{ $banner->image->name }}" loading="lazy" />
                             </div>
                         @endforeach
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -203,47 +228,30 @@
                             <div class="section-body ms-auto">
                                 <h2 class="section-title text-uppercase text-primary fw-5 mb-3 pb-1">Ẩm thực</h2>
                                 <div class="paragraph text-gray mb-4">
-                                    <p><span style="font-weight: 400;">H&agrave;nh tr&igrave;nh ẩm thực tại Avana Retreat
-                                            giống như h&agrave;nh tr&igrave;nh khơi gợi k&yacute; ức hạnh ph&uacute;c. Những
-                                        </span><span style="color: #915c37;"><strong>nguy&ecirc;n liệu tươi ngon
-                                                nhất</strong></span><span style="font-weight: 400;"> được lựa chọn cẩn
-                                            thận, chế biến kh&eacute;o l&eacute;o, b&agrave;y tr&iacute; tinh tế, kết nối
-                                            với </span><span style="color: #915c37;"><strong>thi&ecirc;n
-                                                nhi&ecirc;n</strong></span><span style="font-weight: 400;"> v&agrave;
-                                        </span><span style="color: #915c37;"><strong>văn h&oacute;a địa
-                                                phương</strong></span><span style="font-weight: 400;">. Bởi vậy m&agrave;,
-                                            tại </span><span style="color: #915c37;"><strong>nh&agrave; h&agrave;ng
-                                                b&ecirc;n ruộng bậc thang</strong></span><span style="font-weight: 400;">
-                                            hay kh&ocirc;ng gian </span><span style="color: #915c37;"><strong>b&iacute;
-                                                mật</strong></span><span style="font-weight: 400;">, </span><span
-                                            style="color: #915c37;"><strong>ri&ecirc;ng tư</strong></span><span
-                                            style="font-weight: 400;"> ẩn s&acirc;u trong rừng, trải nghiệm ẩm thực trở
-                                            n&ecirc;n an l&agrave;nh v&agrave; đong đầy cảm x&uacute;c.</span></p>
+                                    <p><span style="font-weight: 400;">
+                                        Hãy sẵn sàng cho một chuyến hành trình đầy cảm xúc, nơi bạn được đắm chìm trong những hương vị tinh tế. Từ các món đặc sản địa phương đậm đà bản sắc đến những tinh hoa ẩm thực quốc tế được chế biến công phu, mỗi món ăn là một câu chuyện, một trải nghiệm đáng nhớ.
+
+                                        Bắt đầu ngày mới với bữa sáng tươi ngon bên khung cảnh thiên nhiên thanh bình, thưởng thức bữa trưa đầy sáng tạo với nguyên liệu tươi sạch, và khép lại ngày bằng một bữa tối lãng mạn dưới ánh nến, nơi những ly rượu vang hảo hạng hòa quyện cùng hương vị tinh túy của ẩm thực.
+
+                                        Hành trình ẩm thực không chỉ là một bữa ăn mà còn là sự khám phá và tận hưởng – nơi bạn cảm nhận được sự kết hợp hài hòa giữa nghệ thuật nấu nướng và tinh thần hiếu khách tuyệt vời.
+                                    </span></p>
                                 </div>
-                                <a class="btn btn-cta btn-outline-primary section-btn-more"
-                                    href="https://avanaretreat.com/vn/am-thuc" role="button">Tìm hiểu thêm</a>
+                                {{-- <a class="btn btn-cta btn-outline-primary section-btn-more"
+                                    href="{{ route('front.cuisine') }}" role="button">Tìm hiểu thêm</a> --}}
                             </div>
                         </div>
                         <div class="col-imgs col-lg-auto d-grid gap-md-4 gap-3">
-                            <div class="cuisine cuisine-1">
-                                <img class="img-fluid w-100 cuisine-img"
-                                    src="https://avanaretreat.com/storage/2024/06/1718779387private dining home.jpg"
-                                    alt="" />
-                                <div class="cuisine-overlay">
-                                    <a class="btn btn-cta btn-outline-white cuisine-btn px-4"
-                                        href="https://avanaretreat.com/vn/tiec-toi-ben-thac" role="button">Tiệc tối riêng
-                                        tư</a>
+                            @foreach ($cuisines as $key => $cuisine)
+                                <div class="cuisine cuisine-{{ $key + 1 }}">
+                                    <img class="img-fluid w-100 cuisine-img"
+                                        src="{{ $cuisine->image->path }}"
+                                        alt="" loading="lazy" />
+                                    <div class="cuisine-overlay">
+                                        <a class="btn btn-cta btn-outline-white cuisine-btn px-4"
+                                            href="{{route('front.cuisine', ['slug' => $cuisine->slug])}}" role="button">{{ $cuisine->name }}</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="cuisine cuisine-2">
-                                <img class="img-fluid w-100 cuisine-img"
-                                    src="https://avanaretreat.com/storage/2023/03/1680112777img-2.jpg" alt="" />
-                                <div class="cuisine-overlay">
-                                    <a class="btn btn-cta btn-outline-white cuisine-btn px-4"
-                                        href="https://avanaretreat.com/vn/am-thuc-ban-dia" role="button">Ẩm thực bản
-                                        địa</a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -276,7 +284,7 @@
                             <div class="row flex-column h-100">
                                 <div class="col text-center text-md-start flex-center-x flex-column mb-5 mb-xl-0">
                                     <div class="section-content">
-                                        <h2 class="section-title text-uppercase text-primary fw-5 mb-3 pb-1">Orchid Spa
+                                        <h2 class="section-title text-uppercase text-primary fw-5 mb-3 pb-1"> Spa
                                         </h2>
                                         <div class="paragraph text-gray mb-4">
                                             <p><span style="font-weight: 400;">Kh&ocirc;ng phải tự nhi&ecirc;n m&agrave;
@@ -320,36 +328,19 @@
             <!-- END SPA -->
             <!-- Experience -->
             <section class="section-6 section pb-0" id="section-6">
-                <div class="container text-center">
-                    <figure class="blockquote blockquote-center mb-5 pb-md-3">
-                        <blockquote class="blockquote-body">
-                            <p>Rời đường lớn, tìm đến với đường mòn</p>
-                        </blockquote>
-                        <figcaption class="blockquote-footer">
-                            <span class="blockquote-author">PYTHAGORAS</span>
-                        </figcaption>
-                    </figure>
-                </div>
                 <div class="section section-nested text-white"
-                    style="background-image: url('https://avanaretreat.com/storage/2024/08/1723457004exp.jpg')">
+                    style="background-image: url('/site/images/section-6.jpg')">
                     <div class="container py-md-5">
                         <div class="section-content offset-xl-1 text-center text-md-start">
                             <h2 class="section-title text-uppercase fw-5 mb-3 pb-1">TRẢI NGHIỆM</h2>
                             <div class="paragraph fw-5 mb-4">
-                                <p><span style="font-weight: 400;">Avana Retreat l&agrave; một thế giới trong l&ograve;ng
-                                        thế giới với giai điệu, cuộc sống v&agrave; những vận động của ri&ecirc;ng
-                                        m&igrave;nh. Đi </span><span style="color: #ffdfa4;"><strong>trek
-                                        </strong></span><span style="font-weight: 400;">đường m&ograve;n xuy&ecirc;n rừng
-                                        gi&agrave;, thư gi&atilde;n </span><span
-                                        style="color: #ffdfa4;"><strong>ch&egrave;o kayak</strong></span><span
-                                        style="font-weight: 400;"> trong l&ograve;ng hồ, </span><span
-                                        style="font-weight: 400;">hay </span><span style="color: #ffdfa4;"><strong>thiền
-                                        </strong></span><span style="font-weight: 400;">tĩnh tại tr&ecirc;n đồi cao..., mỗi
-                                        trải nghiệm kh&ocirc;ng chỉ để cảm nhận vẻ đẹp v&ugrave;ng đất T&acirc;y Bắc
-                                        m&agrave; c&ograve;n l&agrave; h&agrave;nh tr&igrave;nh t&igrave;m thấy ch&iacute;nh
-                                        m&igrave;nh giữa thi&ecirc;n nhi&ecirc;n.</span></p>
+                                <p><span style="font-weight: 400;">
+                                    Hãy để mỗi khoảnh khắc trở thành một hành trình đáng nhớ với những trải nghiệm tinh tế được thiết kế dành riêng cho bạn. Từ việc thư giãn giữa thiên nhiên thanh bình, đắm mình trong làn nước trong xanh, đến tận hưởng những liệu pháp spa thư giãn sâu, mỗi giây phút đều mang đến sự cân bằng hoàn hảo cho tâm hồn và cơ thể.
+
+                                    Khám phá những hoạt động độc đáo, hay thưởng thức ẩm thực tinh hoa với những nguyên liệu tươi ngon nhất. Dù bạn tìm kiếm sự phiêu lưu, thư giãn hay những khoảnh khắc lãng mạn, hành trình trải nghiệm sẽ đưa bạn đến những cung bậc cảm xúc tuyệt vời nhất.
+                                </span></p>
                             </div>
-                            <a class="btn btn-cta btn-outline-white" href="https://avanaretreat.com/vn/trai-nghiem"
+                            <a class="btn btn-cta btn-outline-white" href="{{ route('front.experienceService') }}"
                                 role="button">Tìm hiểu thêm</a>
                         </div>
                     </div>
@@ -360,11 +351,12 @@
             <section class="section-7 section bg-primary-1 pb-0" id="section-7">
                 <div class="container">
                     <div class="section-header text-center mb-5">
-                        <h2 class="section-title text-uppercase text-primary fw-5 mb-4">Không thể bỏ lỡ</h2>
-                        <p class="section-lead fs-base mx-auto text-gray">Những bí mật của cảm xúc sẽ được gợi mở trước
-                            thiên nhiên. Chào bình minh với trải nghiệm yoga trên đồi cao tĩnh lặng, tiếp nhận năng lượng
-                            ngày mới. Ngâm mình trong hồ nước suối mát lạnh ẩn trong rừng, xoa dịu mọi căng thẳng. Thưởng
-                            thức bữa tối riêng tư, lãng mạn bên dòng thác chảy trong lòng khu nghỉ...</p>
+                        <h2 class="section-title text-uppercase text-primary fw-5 mb-4">Không thể bỏ lỡ những ưu đãi</h2>
+                        <p class="section-lead fs-base mx-auto text-gray">
+                            Tận hưởng những khoảnh khắc đáng giá với các ưu đãi đặc biệt được thiết kế riêng cho bạn! Dù là kỳ nghỉ dưỡng sang trọng, hành trình ẩm thực tinh tế hay những trải nghiệm thư giãn tại spa, đây là cơ hội tuyệt vời để bạn tận hưởng dịch vụ đẳng cấp với mức giá ưu đãi.
+
+                            Nhanh tay đặt ngay để nhận các đặc quyền hấp dẫn như giảm giá phòng, gói trải nghiệm miễn phí, bữa ăn đặc biệt và nhiều quà tặng bất ngờ. Đừng bỏ lỡ cơ hội tuyệt vời này – số lượng ưu đãi có hạn!
+                        </p>
                     </div>
                 </div>
                 <div class="container container-md-fluid px-md-0">
@@ -372,66 +364,22 @@
                         <div class="swiper" data-plugin="swiper"
                             data-options='{"breakpoints":{"768":{"slidesPerView":3,"allowTouchMove":false}}}'>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide highlight-popup" data-next="" data-prev="" data-id="421">
-                                    <a class="thumbnail thumbnail-hover" href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#modal-highlight-2">
-                                        <div class="thumbnail-inner img">
-                                            <img class="thumbnail-img" data-popup-image="https://avanaretreat.com/storage"
-                                                src="https://avanaretreat.com/storage/2024/11/1731551718thac pung.jpg"
-                                                alt="Thác Pùng" />
+                                @foreach ($promotionService as $service)
+                                    <div class="swiper-slide highlight-popup" data-next="" data-prev="" data-id="421">
+                                        <a class="thumbnail thumbnail-hover" href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#modal-highlight-2">
+                                            <div class="thumbnail-inner img">
+                                                <img class="thumbnail-img" data-popup-image="{{ $service->image->path }}"
+                                                    src="{{ $service->image->path }}"
+                                                    alt="{{$service->name}}" />
+                                            </div>
+                                        </a>
+                                        <div class="title" style="position: absolute; z-index: 100; bottom: 10px; color: #fff; right: 10px; font-size: 18px;">{{$service->name}}</div>
+                                        <div class="content d-none">
+                                            <p>{{$service->description}}</p>
                                         </div>
-                                    </a>
-                                    <div class="title d-none">Thác Pùng</div>
-                                    <div class="content d-none">
-                                        <p>Th&aacute;c P&ugrave;ng, con th&aacute;c tự nhi&ecirc;n nằm trong l&ograve;ng khu
-                                            nghỉ l&agrave; khởi nguồn &yacute; tưởng h&igrave;nh th&agrave;nh Avana Retreat.
-                                            Giữa kh&ocirc;ng gian m&aacute;t l&agrave;nh, b&igrave;nh y&ecirc;n n&agrave;y,
-                                            một bữa tối l&atilde;ng mạn hay đ&aacute;m cưới b&iacute; mật sẽ được chuẩn bị
-                                            chỉ d&agrave;nh ri&ecirc;ng cho bạn.</p>
                                     </div>
-                                </div>
-                                <div class="swiper-slide highlight-popup" data-next="" data-prev="" data-id="197">
-                                    <a class="thumbnail thumbnail-hover" href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#modal-highlight-2">
-                                        <div class="thumbnail-inner img">
-                                            <img class="thumbnail-img"
-                                                data-popup-image="https://avanaretreat.com/storage/2023/05/1685348387_MG_0425.jpg"
-                                                src="https://avanaretreat.com/storage/2023/04/1681898859H&#039;mong-Cottage.jpg"
-                                                alt="H&#039;mong Cottage" />
-                                        </div>
-                                    </a>
-                                    <div class="title d-none">H&#039;mong Cottage</div>
-                                    <div class="content d-none">
-                                        <p><span style="font-weight: 400;">Duy&ecirc;n d&aacute;ng tr&ecirc;n đồi cao,
-                                                H'mong Cottage được lấy cảm hứng từ l&aacute;n nhỏ của người H'mong
-                                                tr&ecirc;n những ruộng bậc thang. Tại đ&acirc;y, c&aacute;c lớp học Yoga
-                                                v&agrave; Thiền miễn ph&iacute; c&ugrave;ng huấn luyện vi&ecirc;n được mở
-                                                h&agrave;ng tuần, gi&uacute;p bạn cải thiện sức khoẻ tinh thần v&agrave; thể
-                                                chất.</span></p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide highlight-popup" data-next="" data-prev="" data-id="195">
-                                    <a class="thumbnail thumbnail-hover" href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#modal-highlight-2">
-                                        <div class="thumbnail-inner img">
-                                            <img class="thumbnail-img"
-                                                data-popup-image="https://avanaretreat.com/storage/2024/07/1721613913_VBK0298-edit.jpg"
-                                                src="https://avanaretreat.com/storage/2024/07/1721613909pool.jpg"
-                                                alt="Cloud Pool" />
-                                        </div>
-                                    </a>
-                                    <div class="title d-none">Cloud Pool</div>
-                                    <div class="content d-none">
-                                        <p>Duy&ecirc;n d&aacute;ng như những ruộng bậc thang T&acirc;y Bắc, Cloud Pool xếp
-                                            ba tầng uốn lượn tr&ecirc;n đỉnh đồi, hướng tầm nh&igrave;n v&ocirc; cực ra
-                                            thung lũng v&agrave; d&ograve;ng th&aacute;c P&ugrave;ng tu&ocirc;n chảy trong
-                                            rừng gi&agrave;. Từ nguồn suối tự nhi&ecirc;n, nước tại Cloud Pool được lọc sạch
-                                            tạp chất, m&aacute;t lạnh v&agrave;o m&ugrave;a h&egrave;, v&agrave; ấm
-                                            n&oacute;ng v&agrave;o m&ugrave;a đ&ocirc;ng, đ&aacute;p ứng nhu cầu thư
-                                            gi&atilde;n bốn m&ugrave;a.<br />(Cảnh quan thực tế thay đổi theo thời điểm.)
-                                        </p>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -439,37 +387,16 @@
                 </div>
             </section>
             <!-- END Hightlight -->
-            <section class="section-8 section py-0" id="section-8">
-                <h2 class="visually-hidden">Map Avana Retreat</h2>
-                <div class="section-map">
-                    <img class="img-fluid w-100 of-cover"
-                        src="https://avanaretreat.com/storage/2023/08/1691721842Map Avana - VN_1920.png"
-                        alt="Cách di chuyển đến Avana retreat" />
-                </div>
-                <div class="text-center mt-4 mt-lg-0">
-                    <a target="_blank" class="btn btn-has-icon btn-primary section-btn"
-                        href="https://avanaretreat.com/vn/cach-di-chuyen-den-avana-retreat" type="button">
-                        <span class="btn-icon">
-                            <svg class="iconsvg-car">
-                                <use xlink:href="/htmlv2/images/sprite.svg#car"></use>
-                            </svg>
-                        </span>
-                        Cách di chuyển đến<br>Avana retreat
-                    </a>
-                </div>
-            </section>
             <!-- BLOG -->
             <section class="section-blog section pb-0" id="section-blog">
                 <div class="container">
                     <div class="row gx-xl-5 gy-md-5 gy-4 mb-md-5 mb-3">
                         <div class="col-lg-3 text-center text-lg-start">
                             <div class="section-body ms-auto">
-                                <h2 class="section-title text-uppercase text-primary fw-5 fs-35px mb-4">Blog</h2>
-                                <p class="paragraph text-gray mb-4">Khám phá những thông tin, câu chuyện thú vị về Avana
-                                    Retreat, thiên nhiên, văn hóa, cuộc sống bản địa ở Mai Châu và những hoạt động cộng đồng
-                                    đầy ý nghĩa.</p>
+                                <h2 class="section-title text-uppercase text-primary fw-5 fs-35px mb-4">Gói nghỉ dưỡng</h2>
+                                <p class="paragraph text-gray mb-4">Thảnh thơi nghỉ dưỡng với ưu đãi đặc biệt của Asia Tropical.</p>
                                 <a class="btn btn-cta btn-primary section-btn-more"
-                                    href="https://avanaretreat.com/vn/blog" role="button">Xem thêm</a>
+                                    href="{{ route('front.resortService') }}" role="button">Xem thêm</a>
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -477,24 +404,22 @@
                                 <div class="row gx-0">
                                     <div class="col-md-7">
                                         <a class="thumbnail thumbnail-hover h-100"
-                                            href="https://avanaretreat.com/vn/blog/380-mua-dong-thu-thai-voi-be-boi-nuoc-nong-tai-avana-retreat.html">
+                                            href="{{ route('front.detailResortService', ['slug' =>$resortService[0]->slug ]) }}">
                                             <div class="thumbnail-inner">
                                                 <img class="thumbnail-img"
-                                                    src="https://avanaretreat.com/storage/2023/05/1685067878Mùa Đông Thư Thái Với Bể Bơi Nước Nóng Tại Avana Retreat.jpg"
-                                                    alt="Mùa Đông Thư Thái Với Bể Bơi Nước Nóng Tại Avana Retreat" />
+                                                    src="{{ $resortService[0]->image->path }}"
+                                                    alt="{{$resortService[0]->name}}" />
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-5 align-self-md-stretch">
                                         <div class="card-body text-center text-md-start">
                                             <h3 class="card-title mb-3">
-                                                <a
-                                                    href="https://avanaretreat.com/vn/blog/380-mua-dong-thu-thai-voi-be-boi-nuoc-nong-tai-avana-retreat.html">Mùa
-                                                    Đông Thư Thái Với Bể Bơi Nước Nóng Tại Avana Retreat</a>
+                                                <a href="{{ route('front.detailResortService', ['slug' =>$resortService[0]->slug ]) }}">
+                                                    {{$resortService[0]->name}}</a>
                                             </h3>
-                                            <p class="card-meta text-primary">30/10/2024</p>
-                                            <p class="card-text paragraph">Bể bơi nước nóng cùng những trải nghiệm thú vị
-                                                cho kỳ nghỉ mùa đông</p>
+                                            <p class="card-meta text-primary">Chỉ từ <span class="fs-30px">{{ formatCurrency($resortService[0]->price) }}</span> VNĐ/ Khách</p>
+                                            <p class="card-text paragraph">{{ $resortService[0]->description}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -505,75 +430,33 @@
                         <div class="swiper" data-plugin="swiper"
                             data-options='{"spaceBetween":16,"slidesPerView":"auto","breakpoints":{"768":{"spaceBetween":20,"slidesPerView":3,"allowTouchMove":false}}}'>
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide h-auto">
-                                    <article class="card card-post h-100">
-                                        <a class="thumbnail thumbnail-hover"
-                                            href="https://avanaretreat.com/vn/blog/367-avana-retreat-diem-den-lang-man-cho-tinh-yeu.html">
-                                            <div class="thumbnail-inner">
-                                                <img class="thumbnail-img"
-                                                    src="https://avanaretreat.com/uploads/crop/413x267/2024/10/1729047302diem_den_lang_man.jpg"
-                                                    alt="Avana Retreat - Điểm Đến Lãng Mạn Cho Tình Yêu" />
+                                @foreach ($resortService as $key => $item)
+                                    @if ($key == 0)
+                                        @break
+                                    @endif
+                                    <div class="swiper-slide h-auto">
+                                        <article class="card card-post h-100">
+                                            <a class="thumbnail thumbnail-hover"
+                                                href="{{route('front.detailResortService', ['slug' => $item->slug])}}">
+                                                <div class="thumbnail-inner">
+                                                    <img class="thumbnail-img"
+                                                        src="{{ $item->image->path }}"
+                                                        alt="{{$item->name}}" loading="lazy" />
+                                                </div>
+                                            </a>
+                                            <div class="card-body text-center text-md-start p-3 p-lg-4">
+                                                <h3 class="card-title fs-lg mb-3">
+                                                    <a
+                                                        href="{{route('front.detailResortService', ['slug' => $item->slug])}}">{{$item->name}}</a>
+                                                </h3>
+                                                <p class="card-meta text-primary mb-lg-2 mb-0">
+                                                    Chỉ từ <span class="fs-30px">{{ formatCurrency($item->price) }}</span>
+                                                    VNĐ/ Khách</p>
+                                                <p class="card-text paragraph d-none d-lg-block">{{$item->description}}</p>
                                             </div>
-                                        </a>
-                                        <div class="card-body text-center text-md-start p-3 p-lg-4">
-                                            <h3 class="card-title fs-lg mb-3">
-                                                <a
-                                                    href="https://avanaretreat.com/vn/blog/367-avana-retreat-diem-den-lang-man-cho-tinh-yeu.html">Avana
-                                                    Retreat - Điểm Đến Lãng Mạn Cho Tình Yêu</a>
-                                            </h3>
-                                            <p class="card-meta text-primary mb-lg-2 mb-0">24/08/2024</p>
-                                            <p class="card-text paragraph d-none d-lg-block">Giữa thiên nhiên thơ mộng,
-                                                riêng tư, hãy dành thời gian cho tình yêu nở rộ</p>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide h-auto">
-                                    <article class="card card-post h-100">
-                                        <a class="thumbnail thumbnail-hover"
-                                            href="https://avanaretreat.com/vn/blog/360-mua-may-ghe-tham-ban-nho.html">
-                                            <div class="thumbnail-inner">
-                                                <img class="thumbnail-img"
-                                                    src="https://avanaretreat.com/uploads/crop/413x267/2024/10/1729047319mua_may.jpg"
-                                                    alt="Mùa Mây Ghé Thăm Bản Nhỏ" />
-                                            </div>
-                                        </a>
-                                        <div class="card-body text-center text-md-start p-3 p-lg-4">
-                                            <h3 class="card-title fs-lg mb-3">
-                                                <a
-                                                    href="https://avanaretreat.com/vn/blog/360-mua-may-ghe-tham-ban-nho.html">Mùa
-                                                    Mây Ghé Thăm Bản Nhỏ</a>
-                                            </h3>
-                                            <p class="card-meta text-primary mb-lg-2 mb-0">24/05/2024</p>
-                                            <p class="card-text paragraph d-none d-lg-block">Với vị trí biệt lập trong
-                                                thung lũng, Avana Retreat là nơi lý tưởng để bạn “săn mây”.</p>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide h-auto">
-                                    <article class="card card-post h-100">
-                                        <a class="thumbnail thumbnail-hover"
-                                            href="https://avanaretreat.com/vn/blog/379-9-dieu-dac-biet-ve-orchid-spa.html">
-                                            <div class="thumbnail-inner">
-                                                <img class="thumbnail-img"
-                                                    src="https://avanaretreat.com/uploads/crop/413x267/2024/10/1729047205dieu_dac_biet_ve_orchild_spa.jpg"
-                                                    alt="9 Điều Đặc Biệt Về Orchid Spa" />
-                                            </div>
-                                        </a>
-                                        <div class="card-body text-center text-md-start p-3 p-lg-4">
-                                            <h3 class="card-title fs-lg mb-3">
-                                                <a
-                                                    href="https://avanaretreat.com/vn/blog/379-9-dieu-dac-biet-ve-orchid-spa.html">9
-                                                    Điều Đặc Biệt Về Orchid Spa</a>
-                                            </h3>
-                                            <p class="card-meta text-primary mb-lg-2 mb-0">26/03/2024</p>
-                                            <p class="card-text paragraph d-none d-lg-block">Orchid Spa, nơi bạn đón nhận
-                                                năng lượng thiên nhiên thuần khiết</p>
-                                        </div>
-                                    </article>
-                                </div>
-
+                                        </article>
+                                    </div>
+                                @endforeach
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
@@ -581,239 +464,6 @@
                 </div>
             </section>
             <!-- journey -->
-            <section class="section-9 section" id="section-9">
-                <div class="container">
-                    <div class="row gx-5 align-items-center">
-                        <div class="col-xl-3 col-lg-4 order-lg-last">
-                            <div class="section-content text-center text-lg-start">
-                                <h2 class="section-title text-uppercase text-primary fw-5 mb-3 pb-1 text-lg-nowrap">Khoảnh
-                                    khắc đáng nhớ</h2>
-                                <p class="paragraph text-gray mb-4">Cùng Avana Retreat lưu giữ những khoảnh khắc thư thái,
-                                    hạnh phúc và ý nghĩa trong kỳ nghỉ kết nối với thiên nhiên và văn hóa bản địa truyền
-                                    thống.</p>
-                                <a class="btn btn-cta btn-outline-primary"
-                                    href="https://avanaretreat.com/vn/tu-lieu-truyen-thong.html?mtab=64"
-                                    role="button">Xem thêm</a>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-8 gj-gallery">
-                            <!-- for desktop-->
-                            <div class="row align-items-center d-none d-md-flex">
-                                <div class="col-4">
-                                    <div class="row">
-
-                                        <!-- <a class="thumbnail thumbnail-hover rounded-2" href="#" data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                              <div class="thumbnail-inner">
-                                                <img class="thumbnail-img" src="https://avanaretreat.com/vn/htmlv2/images/ex/home/s9/img-1.jpg" alt="" />
-                                              </div>
-                                            </a> -->
-
-
-                                        <div class="col-12">
-                                            <a class="thumbnail thumbnail-hover rounded-2 journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/05/1685330480Aden and Peggy.jpg"
-                                                        src="https://avanaretreat.com/storage/2023/05/1685330472Aden and Peggy (1).jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Aden and Ms.Peggy</div>
-                                                    <div class="content d-none">"Chúng tôi vẫn thường xuyên nhắc về Avana
-                                                        Retreat với bạn bè. Cảm ơn sự chăm chỉ và tận tâm của các bạn. Nơi
-                                                        đây luôn nằm trong trái tim của chúng tôi."</div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="row">
-
-                                        <!-- <a class="thumbnail thumbnail-hover rounded-2" href="#" data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                              <div class="thumbnail-inner">
-                                                <img class="thumbnail-img" src="https://avanaretreat.com/vn/htmlv2/images/ex/home/s9/img-1.jpg" alt="" />
-                                              </div>
-                                            </a> -->
-
-
-                                        <div class="col-12">
-                                            <a class="thumbnail thumbnail-hover rounded-2 journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/05/1684380369Adrian Anh Tuấn.jpg"
-                                                        src="https://avanaretreat.com/storage/2023/04/1681703443Rectangle 28.png"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Adrian Anh Tuấn</div>
-                                                    <div class="content d-none">"Resort có view đẹp xỉu luôn chụp hoài
-                                                        không chán, mùa đông chắc còn mê ly nữa á!"</div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <!-- <a class="thumbnail thumbnail-hover rounded-2" href="#" data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                              <div class="thumbnail-inner">
-                                                <img class="thumbnail-img" src="https://avanaretreat.com/vn/htmlv2/images/ex/home/s9/img-1.jpg" alt="" />
-                                              </div>
-                                            </a> -->
-
-
-                                        <div class="col-12">
-                                            <a class="thumbnail thumbnail-hover rounded-2 journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/06/1685953759ảnh từ fb (1) (1).jpg"
-                                                        src="https://avanaretreat.com/storage/2023/06/1685953757ảnh từ fb (1).jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Ms. Ngô Thanh Vân</div>
-                                                    <div class="content d-none">"Yêu và sống trọn vẹn ở hiện tại. Đó mới
-                                                        gọi là hạnh phúc. Cám ơn Avana Retreat đã giúp vun đắp cho chúng tớ
-                                                        những kỷ niệm thật đẹp..."</div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="row">
-
-                                        <!-- <a class="thumbnail thumbnail-hover rounded-2" href="#" data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                              <div class="thumbnail-inner">
-                                                <img class="thumbnail-img" src="https://avanaretreat.com/vn/htmlv2/images/ex/home/s9/img-1.jpg" alt="" />
-                                              </div>
-                                            </a> -->
-
-
-                                        <div class="col-12">
-                                            <a class="thumbnail thumbnail-hover rounded-2 journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2024/04/1713325048a2 (1).jpg"
-                                                        src="https://avanaretreat.com/storage/2024/04/1713325040a2.jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Gia Đình Mrs. Amandine</div>
-                                                    <div class="content d-none">Nụ cười rạng rỡ của những đứa trẻ trong gia
-                                                        đình Mrs. Amandine thực sự sưởi ấm trái tim chúng tôi.</div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <!-- <a class="thumbnail thumbnail-hover rounded-2" href="#" data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                              <div class="thumbnail-inner">
-                                                <img class="thumbnail-img" src="https://avanaretreat.com/vn/htmlv2/images/ex/home/s9/img-1.jpg" alt="" />
-                                              </div>
-                                            </a> -->
-
-
-                                        <div class="col-12">
-                                            <a class="thumbnail thumbnail-hover rounded-2 journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2024/08/1723457370ngang.jpg"
-                                                        src="https://avanaretreat.com/storage/2024/08/1723457366caption.jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Graham O</div>
-                                                    <div class="content d-none">“Một trong những nơi tuyệt nhất trong hành
-                                                        trình tại Việt Nam của chúng tôi”</div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- for mobile-->
-                            <div class="swiper-container swiper-pagination-outside mx-flush d-md-none">
-                                <div class="swiper" data-plugin="swiper"
-                                    data-options='{"slidesPerView":"auto","centeredSlides":true,"loop":true,"autoplay":{"delay":5000}}'>
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a class="thumbnail thumbnail-hover journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/05/1685330480Aden and Peggy.jpg"
-                                                        src="https://avanaretreat.com/storage/2023/05/1685330472Aden and Peggy (1).jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Aden and Ms.Peggy</div>
-                                                    <div class="content d-none">"Chúng tôi vẫn thường xuyên nhắc về Avana
-                                                        Retreat với bạn bè. Cảm ơn sự chăm chỉ và tận tâm của các bạn. Nơi
-                                                        đây luôn nằm trong trái tim của chúng tôi."</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="thumbnail thumbnail-hover journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/05/1684380369Adrian Anh Tuấn.jpg"
-                                                        src="https://avanaretreat.com/storage/2023/04/1681703443Rectangle 28.png"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Adrian Anh Tuấn</div>
-                                                    <div class="content d-none">"Resort có view đẹp xỉu luôn chụp hoài
-                                                        không chán, mùa đông chắc còn mê ly nữa á!"</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="thumbnail thumbnail-hover journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2023/06/1685953759ảnh từ fb (1) (1).jpg"
-                                                        src="https://avanaretreat.com/storage/2023/06/1685953757ảnh từ fb (1).jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Ms. Ngô Thanh Vân</div>
-                                                    <div class="content d-none">"Yêu và sống trọn vẹn ở hiện tại. Đó mới
-                                                        gọi là hạnh phúc. Cám ơn Avana Retreat đã giúp vun đắp cho chúng tớ
-                                                        những kỷ niệm thật đẹp..."</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="thumbnail thumbnail-hover journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2024/04/1713325048a2 (1).jpg"
-                                                        src="https://avanaretreat.com/storage/2024/04/1713325040a2.jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Gia Đình Mrs. Amandine</div>
-                                                    <div class="content d-none">Nụ cười rạng rỡ của những đứa trẻ trong gia
-                                                        đình Mrs. Amandine thực sự sưởi ấm trái tim chúng tôi.</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a class="thumbnail thumbnail-hover journey-popup" href="#"
-                                                data-bs-toggle="modal" data-bs-target="#modal-guest-journey">
-                                                <div class="thumbnail-inner">
-                                                    <img class="thumbnail-img"
-                                                        data-popup-image="https://avanaretreat.com/storage/2024/08/1723457370ngang.jpg"
-                                                        src="https://avanaretreat.com/storage/2024/08/1723457366caption.jpg"
-                                                        alt="" />
-                                                    <div class="title d-none">Mr. Graham O</div>
-                                                    <div class="content d-none">“Một trong những nơi tuyệt nhất trong hành
-                                                        trình tại Việt Nam của chúng tôi”</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- =============== POPUP ================ -->
             <div class="modal fade modal-guest-journey text-center" id="modal-guest-journey" tabindex="-1"
@@ -906,9 +556,19 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".banner-slider", {
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+            spaceBetween: 30,
+            loop: true,
             pagination: {
                 el: ".swiper-pagination",
                 dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
         });
     </script>

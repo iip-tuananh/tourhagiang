@@ -78,7 +78,13 @@ class FrontController extends Controller
             ->select(['id','name','slug'])
             ->limit(5)->get();
 
-        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'supportsStaff', 'banners', 'newBlogs'));
+        $listRoom = Room::query()->with(['galleries' => function ($q) {
+            $q->select(['id', 'room_id', 'sort'])
+                ->with(['image'])
+                ->orderBy('sort', 'ASC');
+        }])->get();
+
+        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'supportsStaff', 'banners', 'newBlogs', 'listRoom'));
     }
 
     public function roomCategory(Request $request) {

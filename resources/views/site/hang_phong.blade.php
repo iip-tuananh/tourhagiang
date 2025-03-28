@@ -27,194 +27,195 @@
             </section>
 
             <section class="acc-section-2">
-                @foreach($rooms as $key => $room)
-                    @if($key % 2 == 0)
-                        <div class="section-acc section mb-0" id="rooms-accommodation2">
-                            <div class="container">
-                                <div class="section-row row gx-0 gy-4">
-                                    <div class="col-lg-6">
-                                        <div class="section-body">
-                                            <h2 class="section-title mb-4 pb-lg-2">{{ $room->name }}</h2>
-                                            <ul class="list list-icons mb-lg-5 mb-4">
-                                                <li class="list-item">
-                                                    <span class="list-icon">
-                                                        <svg class="iconsvg-size-o">
-                                                            <use xlink:href="/htmlv2/images/sprite.svg#size-o"></use>
-                                                        </svg>
-                                                    </span>Diện tích: {{ $room->area }}
-                                                </li>
-                                                <li class="list-item">
-                                                    <span class="list-icon">
-                                                        <svg class="iconsvg-group-o">
-                                                            <use xlink:href="/htmlv2/images/sprite.svg#group-o"></use>
-                                                        </svg>
-                                                    </span>Số khách tối đa: {{ $room->maximum_occupancy }}
-                                                </li>
-                                                <li class="list-item">
-                                                    <span class="list-icon">
-                                                        <svg class="iconsvg-photo-o">
-                                                            <use xlink:href="/htmlv2/images/sprite.svg#photo-o"></use>
-                                                        </svg>
-                                                    </span>View: {{ $room->view }}
-                                                </li>
-                                                <li class="list-item">
-                                                    <span class="list-icon">
-                                                        <svg class="iconsvg-bedroom-o">
-                                                            <use xlink:href="/htmlv2/images/sprite.svg#bedroom-o"></use>
-                                                        </svg>
-                                                    </span>{{ $room->bedrooms }}
-                                                </li>
-                                            </ul>
-                                            <div class="tab tab-1 fs-sm mb-4 pb-2">
-                                                <div class="nav-responsive">
-                                                    <div class="nav-responsive-inner">
+                @foreach ($rooms as $key => $room)
+                    @if ($key % 2 == 0)
+                            <div class="section-acc section mb-0" id="{{ $room->name }}">
+                                <div class="container">
+                                    <div class="section-row row gx-0 gy-4">
+                                        <div class="col-lg-6">
+                                            <div class="section-body">
+                                                <h2 class="section-title mb-4 pb-lg-2">{{ $room->name }}</h2>
+                                                <ul class="list list-icons mb-lg-5 mb-4">
+                                                    <li class="list-item">
+                                                        <span class="list-icon">
+                                                            <svg class="iconsvg-size-o">
+                                                                <use xlink:href="/htmlv2/images/sprite.svg#size-o"></use>
+                                                            </svg>
+                                                        </span>Diện tích: {{ $room->area }}
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <span class="list-icon">
+                                                            <svg class="iconsvg-group-o">
+                                                                <use xlink:href="/htmlv2/images/sprite.svg#group-o"></use>
+                                                            </svg>
+                                                        </span>Số khách tối đa: {{ $room->maximum_occupancy }}
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <span class="list-icon">
+                                                            <svg class="iconsvg-photo-o">
+                                                                <use xlink:href="/htmlv2/images/sprite.svg#photo-o"></use>
+                                                            </svg>
+                                                        </span>View: {{ $room->view }}
+                                                    </li>
+                                                    <li class="list-item">
+                                                        <span class="list-icon">
+                                                            <svg class="iconsvg-bedroom-o">
+                                                                <use xlink:href="/htmlv2/images/sprite.svg#bedroom-o"></use>
+                                                            </svg>
+                                                        </span>{{ $room->bedrooms }}
+                                                    </li>
+                                                </ul>
+                                                <div class="tab tab-1 fs-sm mb-4 pb-2">
+                                                    <div class="nav-responsive">
+                                                        <div class="nav-responsive-inner">
 
-                                                        <ul class="tab-nav nav nav-dots mb-lg-4 mb-3">
-                                                            <li class="nav-item">
-                                                                <a class="nav-link active" href="#tab-1-description-0"
-                                                                    data-bs-toggle="tab">Mô tả</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#tab-1-key-facts-0"
-                                                                    data-bs-toggle="tab">Điểm nổi bật</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="#tab-1-facilities-0"
-                                                                    data-bs-toggle="tab">Tiện nghi</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-content">
-                                                    <div class="tab-pane fade show active" id="tab-1-description-0">
-                                                        <div class="paragraph">
-                                                            {!! $room->description !!}
+                                                            <ul class="tab-nav nav nav-dots mb-lg-4 mb-3">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" href="#tab-1-description-0"
+                                                                        data-bs-toggle="tab">Mô tả</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#tab-1-key-facts-0"
+                                                                        data-bs-toggle="tab">Điểm nổi bật</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#tab-1-facilities-0"
+                                                                        data-bs-toggle="tab">Tiện nghi</a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane fade list-wrapper list list-bullets list-gap-2 paragraph"
-                                                        id="tab-1-key-facts-0">
-                                                        <ul>
-                                                            <?php $points = explode("\n", $room->highlight); ?>
-                                                            @foreach ($points as $point)
-                                                                <li>{{ $point }}</li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="tab-1-facilities-0">
-                                                        <div class="list list-icons row gy-3">
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-wifi-o">
-                                                                            <use
-                                                                                xlink:href="{{ asset('site/images/wifi.svg') }}">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>Wifi miễn phí
-                                                                </div>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade show active" id="tab-1-description-0">
+                                                            <div class="paragraph">
+                                                                {!! $room->description !!}
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-tea-o">
-                                                                            <use
-                                                                                xlink:href="https://avanaretreat.com/htmlv2/images/sprite.svg#tea-o">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>Dụng cụ pha trà &amp; cà phê
+                                                        </div>
+                                                        <div class="tab-pane fade list-wrapper list list-bullets list-gap-2 paragraph"
+                                                            id="tab-1-key-facts-0">
+                                                            <ul>
+                                                                <?php $points = explode("\n", $room->highlight); ?>
+                                                                @foreach ($points as $point)
+                                                                    <li>{{ $point }}</li>
+                                                                @endforeach
+                                                            </ul>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="tab-1-facilities-0">
+                                                            <div class="list list-icons row gy-3">
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-wifi-o">
+                                                                                <use
+                                                                                    xlink:href="{{ asset('site/images/wifi.svg') }}">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>Wifi miễn phí
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-conditioning-o">
-                                                                            <use
-                                                                                xlink:href="/htmlv2/images/sprite.svg#conditioning-o">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>Điều hòa không khí 2 chiều
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-tea-o">
+                                                                                <use
+                                                                                    xlink:href="https://avanaretreat.com/htmlv2/images/sprite.svg#tea-o">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>Dụng cụ pha trà &amp; cà phê
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-minibar-o">
-                                                                            <use
-                                                                                xlink:href="/htmlv2/images/sprite.svg#minibar-o">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>Minibar
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-conditioning-o">
+                                                                                <use
+                                                                                    xlink:href="/htmlv2/images/sprite.svg#conditioning-o">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>Điều hòa không khí 2 chiều
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-safe">
-                                                                            <use
-                                                                                xlink:href="/htmlv2/images/sprite.svg#safe">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>
-                                                                    Két an toàn
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-minibar-o">
+                                                                                <use
+                                                                                    xlink:href="/htmlv2/images/sprite.svg#minibar-o">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>Minibar
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="list-item">
-                                                                    <span class="list-icon">
-                                                                        <svg class="iconsvg-ipad">
-                                                                            <use
-                                                                                xlink:href="/htmlv2/images/sprite.svg#ipad">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </span>Máy tính bảng
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-safe">
+                                                                                <use
+                                                                                    xlink:href="/htmlv2/images/sprite.svg#safe">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        Két an toàn
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="list-item">
+                                                                        <span class="list-icon">
+                                                                            <svg class="iconsvg-ipad">
+                                                                                <use
+                                                                                    xlink:href="/htmlv2/images/sprite.svg#ipad">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </span>Máy tính bảng
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row g-3 justify-content-left">
-                                                <div class="col-sm-auto">
-                                                    <a class="btn btn-cta btn-outline-primary fs-18px px-md-4 w-100"
-                                                        href="https://avanaretreat.com/vn/dat-phong" role="button">ĐẶT
-                                                        PHÒNG</a>
+                                                <div class="row g-3 justify-content-left">
+                                                    <div class="col-sm-auto">
+                                                        <a class="btn btn-cta btn-outline-primary fs-18px px-md-4 w-100"
+                                                            href="https://avanaretreat.com/vn/dat-phong" role="button">ĐẶT
+                                                            PHÒNG</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="swiper-container swiper-controls-style-1 mx-flush"
-                                            data-plugin="photoswipe">
-                                            <div class="swiper" data-plugin="swiper"
-                                                data-options='{"pagination":{"el":".swiper-pagination","type":"fraction"}}'>
-                                                <div class="swiper-wrapper">
+                                        <div class="col-lg-6">
+                                            <div class="swiper-container swiper-controls-style-1 mx-flush"
+                                                data-plugin="photoswipe">
+                                                <div class="swiper" data-plugin="swiper"
+                                                    data-options='{"pagination":{"el":".swiper-pagination","type":"fraction"}}'>
                                                     <div class="swiper-wrapper">
-                                                        @foreach ($room->galleries as $gally)
-                                                            <div class="swiper-slide">
-                                                                <a href="{{ @$gally->image->path ?? '' }}"
-                                                                    target="_blank">
-                                                                    <img class="img-fluid w-100"
-                                                                        src="{{ @$gally->image->path ?? '' }}?format=jpg"
-                                                                        alt="{{ $room->name }}">
-                                                                </a>
+                                                        <div class="swiper-wrapper">
+                                                            @foreach ($room->galleries as $gally)
+                                                                <div class="swiper-slide">
+                                                                    <a href="{{ @$gally->image->path ?? '' }}"
+                                                                        target="_blank">
+                                                                        <img class="img-fluid w-100"
+                                                                            src="{{ @$gally->image->path ?? '' }}?format=jpg"
+                                                                            alt="{{ $room->name }}">
+                                                                    </a>
+                                                                </div>
+                                                            @endforeach
+                                                        </div>
+                                                        <div class="swiper-buttons">
+                                                            <div class="swiper-button-prev">
+                                                                <svg class="iconsvg-chevron-right rotate-180">
+                                                                    <use xlink:href="/htmlv2/images/sprite.svg#chevron-right">
+                                                                    </use>
+                                                                </svg>
                                                             </div>
-                                                        @endforeach
-                                                    </div>
-                                                    <div class="swiper-buttons">
-                                                        <div class="swiper-button-prev">
-                                                            <svg class="iconsvg-chevron-right rotate-180">
-                                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-right">
-                                                                </use>
-                                                            </svg>
+                                                            <div class="swiper-button-next">
+                                                                <svg class="iconsvg-chevron-right">
+                                                                    <use xlink:href="/htmlv2/images/sprite.svg#chevron-right">
+                                                                    </use>
+                                                                </svg>
+                                                            </div>
                                                         </div>
-                                                        <div class="swiper-button-next">
-                                                            <svg class="iconsvg-chevron-right">
-                                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-right">
-                                                                </use>
-                                                            </svg>
-                                                        </div>
+                                                        <div class="swiper-pagination"></div>
                                                     </div>
-                                                    <div class="swiper-pagination"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,7 +223,7 @@
                                 </div>
                             </div>
                         @else
-                            <div class="section-acc section mb-0  bg-light " id="rooms-accommodation1">
+                            <div class="section-acc section mb-0  bg-light " id="{{ $room->name }}">
                                 <div class="container">
                                     <div class="section-row row gx-0 gy-4">
                                         <div class="col-lg-6">
@@ -421,11 +422,6 @@
                             </div>
                     @endif
                 @endforeach
-
-
-
-
-
             </section>
             <section class="acc-section-3 section py-0">
                 <div class="container">
@@ -777,7 +773,7 @@
                                 url: actionUrl,
                                 dataType: "json",
                                 data: form
-                            .serialize(), // serializes the form's elements.
+                                    .serialize(), // serializes the form's elements.
                                 beforeSend: function(request) {
                                     request.setRequestHeader("captcha", token);
                                 },
@@ -797,8 +793,8 @@
         </script>
     </div>
     <!-- <div class="loader" id="loader">
-        <span class="loader-text" id="loader-text">0%</span>
-    </div> -->
+            <span class="loader-text" id="loader-text">0%</span>
+        </div> -->
     <div class="modal-booknow modal modal-xl mfp-with-anim mfp-hide" id="modal-booknow-form">
         <div class="text-center mb-5">
             <h4 class="text-primary text-uppercase mb-3 fw-5">Cảm ơn đã liên hệ với chúng tôi </h4>

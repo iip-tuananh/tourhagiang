@@ -27,7 +27,7 @@
                         <a class="nav-link " href="{{route('front.room-category')}}">Hạng phòng</a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/spa">ORCHID SPA</a>
+                        <a class="nav-link " href="/vn/spa">SPA</a>
                     </li>
                     {{-- <li class="nav-item  ">
                         <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>

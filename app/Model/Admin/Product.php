@@ -151,11 +151,6 @@ class Product extends BaseModel
             'category',
             'image',
             'image_back',
-            'galleries' => function ($q) {
-                $q->select(['id', 'product_id', 'sort'])
-                    ->with(['image'])
-                    ->orderBy('sort', 'ASC');
-            },
         ]);
 
         if (!empty($request->name)) {

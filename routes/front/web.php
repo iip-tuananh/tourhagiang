@@ -4,6 +4,12 @@ Route::group(['namespace' => 'Front'], function () {
     Route::get('/','FrontController@homePage')->name('front.home-page');
     Route::get('/room-category','FrontController@roomCategory')->name('front.room-category');
     Route::get('/cuisine/{slug}','FrontController@cuisine')->name('front.cuisine');
+    Route::get('/spa','FrontController@spa')->name('front.spa');
+    Route::get('/cloud-pool','FrontController@cloudPool')->name('front.cloudPool');
+
+
+
+
     Route::get('/tour-detail/{slug}','FrontController@tourDetail')->name('front.tour-detail');
     Route::get('/search-tour','FrontController@searchTour')->name('front.search-tour');
     Route::get('/uu-dai.html','FrontController@promotionService')->name('front.promotionService');

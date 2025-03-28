@@ -28,6 +28,44 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::post('/update', 'Admin\ConfigController@update')->name('Config.update')->middleware('checkPermission:Cập nhật cấu hình');
     });
 
+    // spa
+    Route::group(['prefix' => 'spa'], function () {
+        Route::get('/', 'Admin\SpaController@edit')->name('Spa.edit');
+        Route::post('/update', 'Admin\SpaController@update')->name('Spa.update');
+    });
+
+    // dịch vụ spa
+    Route::group(['prefix' => 'services-spa'], function () {
+        Route::get('/', 'Admin\ServiceSpaController@index')->name('ServiceSpa.index');
+        Route::get('/searchData', 'Admin\ServiceSpaController@searchData')->name('ServiceSpa.searchData');
+        Route::get('/{id}/show', 'Admin\ServiceSpaController@show')->name('ServiceSpa.show');
+        Route::get('/create', 'Admin\ServiceSpaController@create')->name('ServiceSpa.create');
+        Route::post('/', 'Admin\ServiceSpaController@store')->name('ServiceSpa.store');
+        Route::post('/{id}/update', 'Admin\ServiceSpaController@update')->name('ServiceSpa.update');
+        Route::get('/{id}/delete', 'Admin\ServiceSpaController@delete')->name('ServiceSpa.delete');
+        Route::get('/{id}/getDataForEdit', 'Admin\ServiceSpaController@getDataForEdit')->name('ServiceSpa.getDataForEdit');
+    });
+
+    // trải nghiệm
+    Route::group(['prefix' => 'experience'], function () {
+        Route::get('/', 'Admin\ExperienceController@index')->name('experience.index');
+        Route::get('/create', 'Admin\ExperienceController@create')->name('experience.create');
+        Route::post('/', 'Admin\ExperienceController@store')->name('experience.store');
+        Route::post('/{id}/update', 'Admin\ExperienceController@update')->name('experience.update');
+        Route::get('/{id}/edit', 'Admin\ExperienceController@edit')->name('experience.edit');
+        Route::get('/{id}/delete', 'Admin\ExperienceController@delete')->name('experience.delete');
+        Route::get('/searchData', 'Admin\ExperienceController@searchData')->name('experience.searchData');
+        Route::get('/{id}/getData', 'Admin\ExperienceController@getData')->name('experience.getData');
+        Route::get('/act-delete', 'Admin\ExperienceController@actDelete')->name('experience.delete.multi');
+        Route::post('/{id}/deleteFile', 'Admin\ExperienceController@deleteFile')->name('experience.deleteFile');
+    });
+
+    // cloud pool
+    Route::group(['prefix' => 'cloud-pool'], function () {
+        Route::get('/', 'Admin\CloudPoolController@edit')->name('CloudPool.edit');
+        Route::post('/update', 'Admin\CloudPoolController@update')->name('CloudPool.update');
+    });
+
     // Menu Catalog
     Route::group(['prefix' => 'categories'], function() {
         Route::get('/create', 'Admin\CategoryController@create')->name('Category.create');

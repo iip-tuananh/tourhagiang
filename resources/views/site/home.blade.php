@@ -349,7 +349,7 @@
                         <div class="col-lg-3 text-center text-lg-start">
                             <div class="section-body ms-auto">
                                 <h2 class="section-title text-uppercase text-primary fw-5 fs-35px mb-4">Gói nghỉ dưỡng</h2>
-                                <p class="paragraph text-gray mb-4">Thảnh thơi nghỉ dưỡng với ưu đãi đặc biệt của Asia Tropical.</p>
+                                <p class="paragraph text-gray mb-4">Thảnh thơi nghỉ dưỡng với ưu đãi đặc biệt của {{$config->web_title}}.</p>
                                 <a class="btn btn-cta btn-primary section-btn-more"
                                     href="{{ route('front.resortService') }}" role="button">Xem thêm</a>
                             </div>

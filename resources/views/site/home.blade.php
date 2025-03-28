@@ -251,8 +251,8 @@
                         <div class="col-md-6">
                             <div class="section-img section-img-1 h-100">
                                 <img class="img-fluid w-100 h-100"
-                                    src="https://avanaretreat.com/storage/2024/01/17052908261681706587Rectangle 18.png"
-                                    alt="" />
+                                    src="{{$spa->image->path}}"
+                                    alt="" loading="lazy" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -262,36 +262,16 @@
                                         <h2 class="section-title text-uppercase text-primary fw-5 mb-3 pb-1"> Spa
                                         </h2>
                                         <div class="paragraph text-gray mb-4">
-                                            <p><span style="font-weight: 400;">Kh&ocirc;ng phải tự nhi&ecirc;n m&agrave;
-                                                    Orchid Spa được v&iacute; như t&acirc;m hồn của Avana Retreat. Nương
-                                                    theo </span><span style="color: #915c37;"><strong>d&ograve;ng
-                                                        suối</strong></span><span style="font-weight: 400;"> giữa
-                                                </span><span style="color: #915c37;"><strong>rừng nguy&ecirc;n
-                                                        sinh</strong></span><span style="font-weight: 400;">, Orchid Spa
-                                                    l&agrave; v&ugrave;ng kh&ocirc;ng gian thư th&aacute;i đến kỳ lạ, thơm
-                                                </span><span style="color: #915c37;"><strong>hương thảo
-                                                        mộc</strong></span><span style="font-weight: 400;"> dịu
-                                                    d&agrave;ng. Một c&acirc;y cầu gỗ d&agrave;i h&agrave;ng trăm
-                                                    m&eacute;t, uốn lượn theo d&ograve;ng chảy của th&aacute;c, tr&aacute;nh
-                                                    từng th&acirc;n c&acirc;y, rồi rẽ nh&aacute;nh, dẫn đến từng
-                                                </span><span style="color: #915c37;"><strong>ph&ograve;ng trị liệu đơn
-                                                        v&agrave; đ&ocirc;i</strong></span><span
-                                                    style="font-weight: 400;">. </span><span
-                                                    style="font-weight: 400;">Orchid Spa giống như một một ốc đảo
-                                                    b&igrave;nh y&ecirc;n, d&agrave;nh tặng </span><span
-                                                    style="color: #915c37;"><strong>phương ph&aacute;p độc
-                                                        quyền</strong></span><span style="font-weight: 400;"> chăm
-                                                    s&oacute;c sức khỏe cho những người muốn nu&ocirc;ng chiều bản
-                                                    th&acirc;n v&agrave; thư gi&atilde;n t&acirc;m hồn.</span></p>
+                                            <p><span style="font-weight: 400;">{!! $spa->intro !!}</span></p>
                                         </div>
-                                        <a class="btn btn-cta btn-outline-primary" href="https://avanaretreat.com/vn/spa"
+                                        <a class="btn btn-cta btn-outline-primary" href="{{ route('front.spa') }}"
                                             role="button">Tìm hiểu thêm</a>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="section-img section-img-2">
                                         <img class="img-fluid w-100"
-                                            src="https://avanaretreat.com/storage/2023/06/1685954053spa.jpg"
+                                            src=""
                                             alt="" />
                                     </div>
                                 </div>

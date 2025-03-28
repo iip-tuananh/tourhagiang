@@ -97,7 +97,9 @@ class FrontController extends Controller
                 $q->where('type', ServiceType::GOI_NGHI_DUONG);
             })->inRandomOrder()->get();
 
-        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'banners', 'newBlogs', 'listRoom', 'cuisines', 'promotionService', 'resortService'));
+        $spa = Spa::query()->with(['blocks.galleries.image'])->find(1);
+
+        return view('site.home', compact('categoriesSpecial', 'categoryParents', 'galleries', 'banners', 'newBlogs', 'listRoom', 'cuisines', 'promotionService', 'resortService', 'spa'));
     }
 
     public function roomCategory(Request $request) {

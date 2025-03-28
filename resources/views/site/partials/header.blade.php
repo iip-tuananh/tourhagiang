@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-cta btn-primary-2 header-cta ms-2 ms-xl-3" href="https://avanaretreat.com/vn/dat-phong" role="button">Đặt phòng
+            <a class="btn btn-cta btn-primary-2 header-cta ms-2 ms-xl-3" href="#" role="button">Đặt phòng
                 <!-- <br class="d-lg-none"> your stay -->
             </a>
         </div>

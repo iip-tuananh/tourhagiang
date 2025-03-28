@@ -32,6 +32,43 @@ class Block extends BaseModel
         return $this->hasMany(BlockGallery::class, 'block_id', 'id');
     }
 
+    public function syncGalleries($galleries)
+    {
+        if ($galleries) {
+            $exist_ids = [];
+            foreach ($galleries as $g) {
+                if (isset($g['id'])) array_push($exist_ids, $g['id']);
+            }
+            $deleted = BlockGallery::where('block_id', $this->id)->whereNotIn('id', $exist_ids)->get();
+            foreach ($deleted as $item) {
+                if ($item->image) {
+                    FileHelper::deleteFileFromCloudflare($item->image, $item->id, BlockGallery::class);
+                }
+                $item->removeFromDB();
+            }
+
+            for ($i = 0; $i < count($galleries); $i++) {
+                $g = $galleries[$i];
+
+                if (isset($g['id'])) $gallery = BlockGallery::find($g['id']);
+                else $gallery = new BlockGallery();
+
+                $gallery->block_id = $this->id;
+                $gallery->sort = $i;
+                $gallery->save();
+
+                if (isset($g['image'])) {
+                    if ($gallery->image) {
+                        FileHelper::deleteFileFromCloudflare($gallery->image, $gallery->id, BlockGallery::class);
+                        $gallery->image->removeFromDB();
+                    }
+                    $file = $g['image'];
+                    FileHelper::uploadFileToCloudflare($file, $gallery->id, BlockGallery::class, null);
+                }
+            }
+        }
+    }
+
     public static function getForSelect() {
         $result = self::select(['id', 'name'])
             ->orderBy('sort_order', 'asc')
@@ -69,36 +106,5 @@ class Block extends BaseModel
         return Auth::user()->id == $this->created_by;
     }
 
-    public function syncGalleries($galleries)
-    {
-        if ($galleries) {
-            $exist_ids = [];
-            foreach ($galleries as $g) {
-                if (isset($g['id'])) array_push($exist_ids, $g['id']);
-            }
-
-            $deleted = BlockGallery::where('block_id', $this->id)->whereNotIn('id', $exist_ids)->get();
-            foreach ($deleted as $item) {
-                $item->removeFromDB();
-            }
-
-            for ($i = 0; $i < count($galleries); $i++) {
-                $g = $galleries[$i];
-
-                if (isset($g['id'])) $gallery = BlockGallery::find($g['id']);
-                else $gallery = new BlockGallery();
-
-                $gallery->block_id = $this->id;
-                $gallery->sort = $i;
-                $gallery->save();
-
-                if (isset($g['image'])) {
-                    if ($gallery->image) $gallery->image->removeFromDB();
-                    $file = $g['image'];
-                    FileHelper::uploadFile($file, 'block_gallery', $gallery->id, BlockGallery::class, null, 99);
-                }
-            }
-        }
-    }
 
 }

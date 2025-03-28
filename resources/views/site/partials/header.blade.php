@@ -1,4 +1,4 @@
-<header class="header header-headroom " id="header">
+<header class="header header-headroom {{ Route::currentRouteName() == 'front.promotionService' || Route::currentRouteName() == 'front.experienceService' || Route::currentRouteName() == 'front.resortService' ? 'header-fixed' : ''}}" id="header">
     <nav class="header-navbar navbar navbar-expand-lg" id="navbar">
         <div class="container">
             <a class="header-logo" href="{{route('front.home-page')}}">
@@ -30,7 +30,7 @@
                         <a class="nav-link " href="/vn/spa">ORCHID SPA</a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/trai-nghiem">Trải nghiệm</a>
+                        <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
                     </li>
                     <li class="nav-item  dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Ẩm Thực</a>
@@ -64,14 +64,14 @@
                         </ul>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/goi-nghi-duong">Gói Nghỉ Dưỡng</a>
+                        <a class="nav-link " href="{{ route('front.resortService') }}">Gói Nghỉ Dưỡng</a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/uu-dai">Ưu đãi</a>
+                        <a class="nav-link " href="{{route('front.promotionService')}}">Ưu đãi</a>
                     </li>
 
                     <li class="nav-item dropdown dropdown-language d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#">Ngôn ngữ</a>
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)">Ngôn ngữ</a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <a class="nav-link " href="javascript:void(0)" onclick="translateheader('en')">Tiếng anh</a>
                             <a class="nav-link active" href="javascript:void(0)" onclick="translateheader('vi')">Tiếng việt</a>

@@ -125,6 +125,12 @@ class Post extends BaseModel
     {
         $post = self::where('id', $id)
             ->with([
+                'blocks',
+                'blocks.galleries' => function ($q) {
+                    $q->select(['id', 'block_id', 'sort'])
+                        ->with(['image'])
+                        ->orderBy('sort', 'ASC');
+                },
                 'image'
             ])
             ->firstOrFail();

@@ -3,7 +3,6 @@
 <script>
     class Service extends BaseClass {
     all_vehicle_categories = @json(\App\Model\Common\VehicleCategory::getForSelect());
-    all_service_types = @json(\App\Model\Common\ServiceType::getForSelect());
 
     before(form) {
         this.image = {};

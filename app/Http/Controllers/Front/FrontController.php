@@ -27,6 +27,8 @@ use App\Model\Admin\Post;
 use App\Model\Admin\PostCategory;
 use App\Model\Admin\ProductRate;
 use App\Model\Admin\Review;
+use App\Model\Admin\Service;
+use App\Model\Admin\ServiceType;
 use App\Model\Admin\Voucher;
 use DB;
 use Mail;
@@ -82,27 +84,60 @@ class FrontController extends Controller
                         ->orderBy('sort', 'ASC');
                 }])->get();
         return view('site.hang_phong', compact('rooms'));
+    }
 
-        $categorySpecial = CategorySpecial::findBySlug($slug);
+    public function cuisine(Request $request, $slug) {
+        $categoryPost = PostCategory::findBySlug($slug);
+        $post = Post::query()->with(['image', 'blocks.galleries.image'])
+            ->where('cate_id', $categoryPost->id)->first();
 
-        if($categorySpecial) {
-            $tours = $categorySpecial->tours()->where('status', Tour::XUAT_BAN)->latest()->paginate(10);
-            $category = $categorySpecial;
+        return view('site.am_thuc', compact('post'));
+    }
+
+    public function promotionService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::UU_DAI);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.uu_dai', compact('listService', 'service_types'));
+    }
+
+    public function experienceService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::TRAI_NGHIEM);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.trai_nghiem', compact('listService', 'service_types'));
+    }
+
+    public function resortService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::GOI_NGHI_DUONG);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.goi_dich_vu', compact('listService', 'service_types'));
+    }
+
+    public function detailResortService($slug) {
+        $service = Service::query()->with(['image', 'galleries.image'])->where('slug', $slug)->first();
+
+        return view('site.chi_tiet_goi_dich_vu', compact('service'));
+    }
+
+    public function getServiceTab(Request $request) {
+        $type = $request->get('type');
+        $slug = $request->get('slug');
+        if ($slug == 'all') {
+            $service_type_ids = ServiceType::query()->where('type', $type)->pluck('id')->toArray();
         } else {
-            if($childSlug) {
-                $childCategory = Category::findBySlug($childSlug);
-                $tours = Tour::query()->where(['status' => 1, 'cate_id' => $childCategory->id])->latest()->paginate(10);
-                $category = $childCategory;
-            } else {
-                $categoryParent = Category::findBySlug($slug);
-                $child_categories = $this->categoryService->getChildCategory($categoryParent, 1);
-                $tours = Tour::query()->whereIn('cate_id', $child_categories->pluck('id')->toArray())
-                    ->where('status', Tour::XUAT_BAN)->latest()->paginate(10);
-                $category = $categoryParent;
-            }
+            $service_type_ids = ServiceType::query()->where('type', $type)->where('slug', $slug)->pluck('id')->toArray();
         }
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
 
-        return view('site.hang_phong', compact('tours', 'category'));
+        return Response::json(['success' => true, 'data' => $listService]);
     }
 
     public function searchTour(Request $request) {

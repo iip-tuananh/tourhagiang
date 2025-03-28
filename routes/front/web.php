@@ -3,8 +3,15 @@
 Route::group(['namespace' => 'Front'], function () {
     Route::get('/','FrontController@homePage')->name('front.home-page');
     Route::get('/room-category','FrontController@roomCategory')->name('front.room-category');
+    Route::get('/cuisine/{slug}','FrontController@cuisine')->name('front.cuisine');
     Route::get('/tour-detail/{slug}','FrontController@tourDetail')->name('front.tour-detail');
     Route::get('/search-tour','FrontController@searchTour')->name('front.search-tour');
+    Route::get('/uu-dai.html','FrontController@promotionService')->name('front.promotionService');
+    Route::get('/trai-nghiem.html','FrontController@experienceService')->name('front.experienceService');
+    Route::get('/goi-nghi-duong.html','FrontController@resortService')->name('front.resortService');
+    Route::get('/goi-nghi-duong/{slug}.html','FrontController@detailResortService')->name('front.detailResortService');
+
+    Route::get('/getServiceTab','FrontController@getServiceTab')->name('front.getServiceTab');
 
     Route::get('/news/{slug?}','FrontController@indexBlog')->name('front.index-blog');
     Route::get('/news-detail/{slug}','FrontController@detailBlog')->name('front.detail-blog');

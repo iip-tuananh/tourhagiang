@@ -477,8 +477,8 @@ class FrontController extends Controller
     public function postContact(Request $request)
     {
         $rule  =  [
-            'your_name' => 'required',
-            'your_phone'  => 'required|regex:/^(0)[0-9]{9,11}$/',
+            // 'your_name' => 'required',
+            // 'your_phone'  => 'required|regex:/^(0)[0-9]{9,11}$/',
             'your_email'  => 'required|email|max:255'
         ];
 
@@ -498,13 +498,14 @@ class FrontController extends Controller
         }
 
         $contact = new Contact();
-        $contact->user_name = $request->your_name;
+        $contact->user_name = $request->your_name ?? null;
         $contact->email = $request->your_email;
-        $contact->phone_number = $request->your_phone;
-        $contact->content = $request->your_message;
+        $contact->phone_number = $request->your_phone ?? null;
+        $contact->content = $request->your_message ?? null;
         $contact->save();
 
-        return $this->responseSuccess('Gửi yêu cầu thành công!');
+        // return $this->responseSuccess('Gửi yêu cầu thành công!');
+        return redirect()->route('front.home-page')->with('successContact', 'Gửi yêu cầu thành công!');
     }
 
     // Blogs

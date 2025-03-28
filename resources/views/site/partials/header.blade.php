@@ -29,9 +29,9 @@
                     <li class="nav-item  ">
                         <a class="nav-link " href="/vn/spa">ORCHID SPA</a>
                     </li>
-                    <li class="nav-item  ">
+                    {{-- <li class="nav-item  ">
                         <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item  dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Ẩm Thực</a>
                         <ul class="dropdown-menu">
@@ -47,9 +47,9 @@
                         </ul>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/cloud-pool">Cloud pool</a>
+                        <a class="nav-link " href="/vn/cloud-pool">Pool & bar về khu nghỉ dưỡng</a>
                     </li>
-                    <li class="nav-item ms-lg-auto dropdown">
+                    {{-- <li class="nav-item ms-lg-auto dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Về Avana</a>
                         <ul class="dropdown-menu">
                             <li>
@@ -62,6 +62,9 @@
                                 <a class="dropdown-item" href="/vn/triet-ly-hoat-dong">Triết lý hoạt động</a>
                             </li>
                         </ul>
+                    </li> --}}
+                    <li class="nav-item ms-lg-auto ">
+                        <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
                     </li>
                     <li class="nav-item  ">
                         <a class="nav-link " href="{{ route('front.resortService') }}">Gói Nghỉ Dưỡng</a>
@@ -114,8 +117,8 @@
                         </a>
                     </div>
                     <div class="nav nav-language mt-auto mb-3">
-                        <a class="nav-link " href="https://avanaretreat.com">en</a>
-                        <a class="nav-link active" href="https://avanaretreat.com/vn">vn</a>
+                        <a class="nav-link " href="javascript:void(0)" onclick="translateheader('en')">Tiếng anh</a>
+                        <a class="nav-link active" href="javascript:void(0)" onclick="translateheader('vi')">Tiếng việt</a>
                     </div>
                 </div>
             </div>

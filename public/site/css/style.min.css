@@ -16800,7 +16800,7 @@ html {
 
 @media (min-width: 1364px) {
     .navbar .container {
-        --bs-gutter-x:10rem
+        --bs-gutter-x: 8rem;
     }
 }
 

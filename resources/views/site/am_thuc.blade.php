@@ -105,4 +105,7 @@
 
             @endif
         </div>
+
+    </div>
+
 @endsection

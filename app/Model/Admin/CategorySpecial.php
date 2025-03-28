@@ -93,7 +93,7 @@ class CategorySpecial extends BaseModel
 
     public static function getDataForEdit($id)
     {
-        return self::with(['tours'])->where('id', $id)
+        return self::with(['image'])->where('id', $id)
             ->firstOrFail();
     }
 
@@ -113,9 +113,9 @@ class CategorySpecial extends BaseModel
         return $this->belongsToMany(Product::class, 'product_category_special', 'category_special_id', 'product_id');
     }
 
-    public function tours()
-    {
-        return $this->belongsToMany(Tour::class, 'tour_category_special', 'category_special_id', 'tour_id');
-    }
+    // public function tours()
+    // {
+    //     return $this->belongsToMany(Tour::class, 'tour_category_special', 'category_special_id', 'tour_id');
+    // }
 
 }

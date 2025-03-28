@@ -16,11 +16,10 @@
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column nav-legacy nav-flat" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link active">
+                <a href="{{route('dash')}}" class="nav-link {{ request()->is('admin/common/dashboard') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         Trang chủ
-                        <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
             </li>
@@ -35,7 +34,7 @@
 {{--            </li>--}}
 
             <li class="nav-item has-treeview  {{ request()->is('common/rooms') || request()->is('uptek/rooms*') || request()->is('admin/rooms') || request()->is('admin/rooms*') ? 'menu-open' : '' }} ">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link {{ request()->is('common/rooms') || request()->is('uptek/rooms*') || request()->is('admin/rooms') || request()->is('admin/rooms*') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-hotel"></i>
                     <p>
                         Hạng phòng
@@ -75,7 +74,7 @@
 
             <li class="nav-item has-treeview  {{ request()->is('admin/posts') || request()->is('admin/posts/*') || request()->is('admin/post-categories') || request()->is('admin/post-categories/*') ? 'menu-open' : '' }} ">
 
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link {{ request()->is('admin/posts') || request()->is('admin/posts/*') || request()->is('admin/post-categories') || request()->is('admin/post-categories/*') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-concierge-bell"></i>
                     <p>
                         Ẩm thực
@@ -99,6 +98,75 @@
                         <a href="{{ route('Post.create') }}" class="nav-link {{ Request::routeIs('Post.create') ? 'active' : '' }}">
                             <i class="far fas  fa-angle-right nav-icon"></i>
                             <p>Thêm mới bài viết</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item has-treeview  {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 1 ? 'menu-open' : '' }} ">
+                <a href="#" class="nav-link {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 1 ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-star"></i>
+                    <p>
+                        Trải nghiệm
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('service_types.index') }}?type=1" class="nav-link {{ (Request::routeIs('service_types.index')) && request()->input('type') == 1 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Phân loại trải nghiệm</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('services.index') }}?type=1" class="nav-link {{ Request::routeIs('services.index') && request()->input('type') == 1 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Danh sách trải nghiệm</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item has-treeview  {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 2 ? 'menu-open' : '' }} ">
+                <a href="#" class="nav-link {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 2 ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-tags"></i>
+                    <p>
+                        Ưu đãi
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('service_types.index') }}?type=2" class="nav-link {{ Request::routeIs('service_types.index') && request()->input('type') == 2 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Phân loại ưu đãi</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('services.index') }}?type=2" class="nav-link {{ Request::routeIs('services.index') && request()->input('type') == 2 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Danh sách ưu đãi</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item has-treeview  {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 3 ? 'menu-open' : '' }} ">
+                <a href="#" class="nav-link {{ (request()->is('admin/services') || request()->is('admin/services*') || request()->is('admin/service-types') || request()->is('admin/service-types*')) && request()->input('type') == 3 ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-box"></i>
+                    <p>
+                        Gói nghỉ dưỡng
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('service_types.index') }}?type=3" class="nav-link {{ Request::routeIs('service_types.index') && request()->input('type') == 3 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Phân loại gói nghỉ dưỡng</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('services.index') }}?type=3" class="nav-link {{ Request::routeIs('services.index') && request()->input('type') == 3 ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Danh sách gói nghỉ dưỡng</p>
                         </a>
                     </li>
                 </ul>

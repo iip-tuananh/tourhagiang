@@ -31,6 +31,8 @@ use App\Model\Admin\Post;
 use App\Model\Admin\PostCategory;
 use App\Model\Admin\ProductRate;
 use App\Model\Admin\Review;
+use App\Model\Admin\Service;
+use App\Model\Admin\ServiceType;
 use App\Model\Admin\Voucher;
 use DB;
 use Mail;
@@ -49,9 +51,7 @@ class FrontController extends Controller
 
     public function homePage() {
         // danh mục đặc biệt
-        $categoriesSpecial = CategorySpecial::query()->with(['tours' => function($q) {
-            $q->where('tours.status', Tour::XUAT_BAN);
-        }, 'tours.image'])
+        $categoriesSpecial = CategorySpecial::query()
             ->where('show_home_page', 1)
             ->orderBy('order_number')->get();
 
@@ -59,20 +59,11 @@ class FrontController extends Controller
         $categoryParents = Category::with([
             'childs' => function($q) {
                 $q->where('show_home_page', 1);
-            },
-            'childs.tours' => function ($q2) {
-                $q2->where('status', Tour::XUAT_BAN)->orderBy('created_at', 'desc');
             }
         ])->where([
             'show_home_page' => 1,
             'parent_id' => 0
         ])->get();
-
-        foreach ($categoryParents as $category) {
-            $category->tours = $category->childs->flatMap(function($child) {
-                return $child->tours;
-            });
-        }
 
         // thư viện ảnh
         $galleries = Gallery::query()->with(['image'])->latest()->get();
@@ -109,6 +100,7 @@ class FrontController extends Controller
         return view('site.am_thuc', compact('post'));
     }
 
+
     public function spa(Request $request) {
         $spa = Spa::query()->with(['blocks.galleries.image'])->find(1);
         $servicesSpa = ServiceSpa::query()->with('image')->get();
@@ -117,10 +109,57 @@ class FrontController extends Controller
         return view('site.spa', compact('spa', 'servicesSpa', 'experienceSpa'));
     }
 
-    public function cloudPool(Request $request) {
+    public function cloudPool(Request $request)
+    {
         $data = CloudPool::query()->with(['blocks.galleries.image'])->find(1);
 
         return view('site.cloud_pool', compact('data'));
+    }
+
+    public function promotionService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::UU_DAI);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.uu_dai', compact('listService', 'service_types'));
+    }
+
+    public function experienceService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::TRAI_NGHIEM);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.trai_nghiem', compact('listService', 'service_types'));
+    }
+
+    public function resortService() {
+        $service_type = ServiceType::query()->where('type', ServiceType::GOI_NGHI_DUONG);
+        $service_type_ids = $service_type->pluck('id')->toArray();
+        $service_types = $service_type->get();
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return view('site.goi_dich_vu', compact('listService', 'service_types'));
+    }
+
+    public function detailResortService($slug) {
+        $service = Service::query()->with(['image', 'galleries.image'])->where('slug', $slug)->first();
+
+        return view('site.chi_tiet_goi_dich_vu', compact('service'));
+    }
+
+    public function getServiceTab(Request $request) {
+        $type = $request->get('type');
+        $slug = $request->get('slug');
+        if ($slug == 'all') {
+            $service_type_ids = ServiceType::query()->where('type', $type)->pluck('id')->toArray();
+        } else {
+            $service_type_ids = ServiceType::query()->where('type', $type)->where('slug', $slug)->pluck('id')->toArray();
+        }
+        $listService = Service::query()->with(['image', 'galleries.image'])->whereIn('service_type_id', $service_type_ids)->get();
+
+        return Response::json(['success' => true, 'data' => $listService]);
     }
 
     public function searchTour(Request $request) {

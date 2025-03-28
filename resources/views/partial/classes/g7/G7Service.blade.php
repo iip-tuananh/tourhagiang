@@ -3,7 +3,6 @@
 <script>
     class G7Service extends BaseClass {
     all_vehicle_categories = @json(\App\Model\Common\VehicleCategory::getForSelect());
-    all_service_types = @json(\App\Model\Common\ServiceType::getForSelect());
     statuses = @json(\App\Model\G7\G7Service::STATUSES);
 
     before(form) {

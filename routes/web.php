@@ -430,6 +430,28 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('/{id}/getDataForEdit', 'Admin\PolicyController@getDataForEdit');
     });
 
+    // Service Types
+    Route::group(['prefix' => 'service-types'], function () {
+        Route::get('/', 'Admin\ServiceTypeController@index')->name('service_types.index');
+        Route::get('/searchData', 'Admin\ServiceTypeController@searchData')->name('service_types.searchData');
+        Route::post('/', 'Admin\ServiceTypeController@store')->name('service_types.store');
+        Route::get('/{id}/edit', 'Admin\ServiceTypeController@edit')->name('service_types.edit');
+        Route::post('/{id}/update', 'Admin\ServiceTypeController@update')->name('service_types.update');
+        Route::get('/{id}/delete', 'Admin\ServiceTypeController@delete')->name('service_types.delete');
+    });
+
+    // Service
+    Route::group(['prefix' => 'services'], function () {
+        Route::get('/', 'Admin\ServiceController@index')->name('services.index');
+        Route::get('/create', 'Admin\ServiceController@create')->name('services.create');
+        Route::get('/searchData', 'Admin\ServiceController@searchData')->name('services.searchData');
+        Route::post('/', 'Admin\ServiceController@store')->name('services.store');
+        Route::get('/{id}/edit', 'Admin\ServiceController@edit')->name('services.edit');
+        Route::post('/{id}/update', 'Admin\ServiceController@update')->name('services.update');
+        Route::get('/{id}/delete', 'Admin\ServiceController@delete')->name('services.delete');
+    });
+
+
     Route::group(['prefix' => 'common'], function () {
         Route::get('/dashboard', 'Common\DashboardController@index')->name('dash');
 

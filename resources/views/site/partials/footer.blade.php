@@ -74,16 +74,16 @@
         <div class="container text-center text-md-start">
             <div class="row justify-content-between align-items-center">
                 <div class="col-md-auto">
-                    <p class="mb-1 mb-md-0">@ 2024 Avana Retreat</p>
+                    <p class="mb-1 mb-md-0">@ 2025 {{ $config->web_title }}</p>
                 </div>
                 <div class="col-md-auto">
-                    <p class="footer-copyright-address mb-1">Panh Village, Bao La Commune, Mai Chau, Hoa Binh, Vietnam</p>
+                    <p class="footer-copyright-address mb-1">{{ $config->address_company }}</p>
                     <div class="row justify-content-center justify-content-md-end">
                         <div class="col-sm-auto mb-1 mb-md-0">
-                            <a href="/cdn-cgi/l/email-protection#71181f00041803181402311007101f10031405031410055f121e1c"><span class="__cf_email__" data-cfemail="89e0e7f8fce0fbe0ecfac9e8ffe8e7e8fbecfdfbece8fda7eae6e4">[email&#160;protected]</span></a>
+                            <a href="mailto:{{ $config->email }}"><span class="__cf_email__">{{ $config->email }}</span></a>
                         </div>
                         <div class="col-sm-auto">
-                            <a href="tel:0218 3819 868">0218 3819 868</a> | <a href="tel:0247 3024 868">0247 3024 868</a>
+                            <a href="tel:{{str_replace(' ','',$config->hotline)}}">{{$config->hotline}}</a> | <a href="tel:{{str_replace(' ','',$config->phone_switchboard)}}">{{$config->phone_switchboard}}</a> | <a href="tel:02372.888.222">02372.888.222</a> | <a href="tel:02376.666.777">02376.666.777</a>
                         </div>
                     </div>
                 </div>

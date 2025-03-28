@@ -18,25 +18,6 @@
                 height: 100%;
             }
         }
-
-        @media (min-width: 768px) {
-            #section-hero .banner-slider .swiper-button-next,
-            #section-hero .banner-slider .swiper-button-prev {
-                display: none;
-                background-color: #fff;
-                padding: 0.5rem;
-            }
-
-            #section-hero .banner-slider .swiper-button-next i,
-            #section-hero .banner-slider .swiper-button-prev i {
-                color: #000;
-            }
-
-            #section-hero .banner-slider:hover .swiper-button-next,
-            #section-hero .banner-slider:hover .swiper-button-prev {
-                display: block;
-            }
-        }
     </style>
 @endsection
 
@@ -62,12 +43,6 @@
                                     alt="{{ $banner->image->name }}" loading="lazy" />
                             </div>
                         @endforeach
-                    </div>
-                    <div class="swiper-button-next">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -556,19 +531,16 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".banner-slider", {
-            // autoplay: {
-            //     delay: 2500,
-            //     disableOnInteraction: false,
-            // },
             spaceBetween: 30,
+            centeredSlides: true,
             loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".swiper-pagination",
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                clickable: true,
             },
         });
     </script>

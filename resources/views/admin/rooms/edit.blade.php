@@ -24,6 +24,7 @@
         app.controller('EditRoom', function ($scope, $http) {
             $scope.arrayInclude = arrayInclude;
             $scope.loading = {};
+            @include('admin.rooms.formJs')
 
             $scope.form = new Room(@json($object), {scope: $scope});
             $scope.submit = function () {

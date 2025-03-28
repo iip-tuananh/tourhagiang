@@ -27,7 +27,6 @@
                                 {!!$spa->intro !!}
                             </p>
                         </div>
-                        <a class="btn btn-cta btn-white fs-18px px-4" target="_blank" href="#" role="button">SPA BROCHURE</a>
                     </div>
                 </section>
 
@@ -87,7 +86,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a class="btn btn-cta btn-outline-primary fs-18px px-4" target="_blank" href="#" role="button">Xem Brochure</a>
+{{--                        <a class="btn btn-cta btn-outline-primary fs-18px px-4" target="_blank" href="#" role="button">Xem Brochure</a>--}}
                     </div>
                 </div>
             </section>

@@ -107,7 +107,8 @@ class FrontController extends Controller
                     $q->select(['id', 'room_id', 'sort'])
                         ->with(['image'])
                         ->orderBy('sort', 'ASC');
-                }])->get();
+                }])->where('status', Room::XUAT_BAN)->get();
+
         return view('site.hang_phong', compact('rooms'));
     }
 

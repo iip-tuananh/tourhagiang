@@ -56,7 +56,7 @@ Quản lý danh mục bài viết
                       <div class="dd-handle dd3-handle"></div>
                       <div class="dd3-content"> <span id="label_show'.$value['id'].'">'.$value['name'].'</span>
                         <span class="span-right">
-                            '.($value['parent_id'] == 0 ? '<a class="link-button" href="'. route('Category.edit',$value['id']) .'" id="'.$value['id'].'" label="'.$value['name'].'"><i class="fa fa-link"></i></a>' : '').'
+                            '.($value['parent_id'] == 0 ? '' : '').'
                           <a class="edit-button" href="'. route('PostCategory.edit',$value['id']) .'" id="'.$value['id'].'" label="'.$value['name'].'"><i class="fas fa-pencil-alt"></i></a>
                           <a class="del-button confirm" href="'. route('PostCategory.delete',$value['id']) .'" id="'.$value['id'].'"><i class="fa fa-trash"></i></a></span>
                       </div>';

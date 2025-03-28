@@ -87,7 +87,7 @@ class PostCategory extends BaseModel
 
     public function canDelete ()
     {
-        return Auth::user()->id == $this->created_by && $this->posts->count() == 0 && $this->getChilds()->isEmpty();
+        return Auth::user()->id == $this->created_by && $this->posts->count() == 0;
     }
 
     public static function getForSelect() {

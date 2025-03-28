@@ -78,28 +78,28 @@
                     ?>
                 <section class="sl-section-3 section bg-primary-1">
                     <div class="container">
-                        <div class="row flex-md-row-reverse gy-3">
+                        <div class="row align-items-center gy-3">
                             <div class="col-md-7">
-                                <div class="px-lg-5 mb-5">
-                                    <h2 class="section-title fs-30px text-center mx-auto mb-4">{{ $block3->title }}</h2>
-                                    <hr class="divider-style-1 my-4" />
+                                <h2 class="section-title fs-30px text-center mb-4">{{ $block3->title }}</h2>
+                                <hr class="divider-style-1 my-4">
+                                <div class="text-gray text-center mb-4">
                                     <div class="paragraph text-gray text-center">
                                         {!! $block3->body !!}
                                     </div>
                                 </div>
-                                @if(@$block3->galleries[0])
-                                    <img class="img-fluid w-100" src="{{ @$block3->galleries[0]->image->path ?? '' }}" alt="{{ $block3->title }}" />
-                                @endif
+                                <img class="img-fluid w-100" src="{{ @$block3->galleries[0]->image->path ?? '' }}" alt="{{ $block3->title }}">
                             </div>
                             <div class="col-md-5">
                                 @if(@$block3->galleries[1])
                                     <img class="img-fluid w-100" src="{{ @$block3->galleries[1]->image->path ?? '' }}" alt="{{ $block3->title }}" />
+                                    <p class="fst-italic fs-22px fw-5 text-primary-3 text-center pt-4">
+                                        {{ $block3->title }}
+                                    </p>
                                 @endif
-                                <p class="paragraph fst-italic fs-22px fw-5 text-primary-3 text-center px-lg-5 pt-lg-4">
-                                </p>
                             </div>
                         </div>
                     </div>
+
                 </section>
 
             @endif

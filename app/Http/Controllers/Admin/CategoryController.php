@@ -47,7 +47,7 @@ class CategoryController extends Controller
                 DB::table('categories')->where('id',$row['id'])->update(['sort_order' => $i]);
             }
 			$json->success = true;
-			$json->message = "Xắp xếp thành công";
+			$json->message = "Sắp xếp thành công";
 			return Response::json($json);
         }
     }

@@ -95,7 +95,6 @@
                                 @if(@$block3->galleries[1])
                                     <img class="img-fluid w-100" src="{{ @$block3->galleries[1]->image->path ?? '' }}" alt="{{ $block3->title }}" />
                                 @endif
-                                <img class="img-fluid w-100 mb-5" src="" alt="Phở Avana" />
                                 <p class="paragraph fst-italic fs-22px fw-5 text-primary-3 text-center px-lg-5 pt-lg-4">
                                 </p>
                             </div>

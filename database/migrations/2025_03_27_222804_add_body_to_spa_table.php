@@ -14,7 +14,7 @@ class AddBodyToSpaTable extends Migration
     public function up()
     {
         Schema::table('spa', function (Blueprint $table) {
-            $table->text('body')->after('intro')->nullable();
+//            $table->text('body')->after('intro')->nullable();
         });
     }
 

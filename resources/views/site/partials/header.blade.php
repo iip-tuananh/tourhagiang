@@ -27,7 +27,7 @@
                         <a class="nav-link " href="{{route('front.room-category')}}">Hạng phòng</a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="{{route('front.spa')}}">SPA</a>
+                        <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
                     </li>
                     {{-- <li class="nav-item  ">
                         <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
@@ -64,7 +64,7 @@
                         </ul>
                     </li> --}}
                     <li class="nav-item ms-lg-auto ">
-                        <a class="nav-link " href="{{route('front.experienceService')}}">Trải nghiệm</a>
+                        <a class="nav-link " href="{{route('front.spa')}}">ORCHID SPA</a>
                     </li>
                     <li class="nav-item  ">
                         <a class="nav-link " href="{{ route('front.resortService') }}">Gói Nghỉ Dưỡng</a>
@@ -83,7 +83,7 @@
                 </ul>
                 <!-- for mobile (cta, socials, language)-->
                 <div class="navbar-bottom d-lg-none">
-                    <a class="btn btn-cta btn-primary-2 mb-4" href="https://avanaretreat.com/vn/dat-phong" role="button">Đặt phòng</a>
+                    <a class="btn btn-cta btn-primary-2 mb-4" href="#" role="button">Đặt phòng</a>
                     <div class="navbar-social social mb-5">
                         <a class="social-item" target="_blank" href="https://www.facebook.com/avanaretreat/">
                             <svg class="iconsvg-facebook">

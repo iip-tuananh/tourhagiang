@@ -531,9 +531,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".banner-slider", {
-            spaceBetween: 30,
+            spaceBetween: 20,
             centeredSlides: true,
-            loop: true,
+            // loop: true,
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,

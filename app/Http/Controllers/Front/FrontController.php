@@ -7,10 +7,14 @@ use App\Http\Traits\ResponseTrait;
 use App\Model\Admin\Block;
 use App\Model\Admin\Category;
 use App\Model\Admin\CategorySpecial;
+use App\Model\Admin\CloudPool;
 use App\Model\Admin\Config;
+use App\Model\Admin\Experience;
 use App\Model\Admin\Gallery;
 use App\Model\Admin\Product;
 use App\Model\Admin\Room;
+use App\Model\Admin\ServiceSpa;
+use App\Model\Admin\Spa;
 use App\Model\Admin\Tour;
 use App\Services\CategoryService;
 use Illuminate\Http\Request;
@@ -98,9 +102,25 @@ class FrontController extends Controller
     public function cuisine(Request $request, $slug) {
         $categoryPost = PostCategory::findBySlug($slug);
         $post = Post::query()->with(['image', 'blocks.galleries.image'])
-            ->where('cate_id', $categoryPost->id)->first();
+            ->where('cate_id', $categoryPost->id)
+            ->where('status', Post::XUAT_BAN)
+            ->first();
 
         return view('site.am_thuc', compact('post'));
+    }
+
+    public function spa(Request $request) {
+        $spa = Spa::query()->with(['blocks.galleries.image'])->find(1);
+        $servicesSpa = ServiceSpa::query()->with('image')->get();
+        $experienceSpa = Experience::query()->with(['galleries.image', 'image'])->get();
+
+        return view('site.spa', compact('spa', 'servicesSpa', 'experienceSpa'));
+    }
+
+    public function cloudPool(Request $request) {
+        $data = CloudPool::query()->with(['blocks.galleries.image'])->find(1);
+
+        return view('site.cloud_pool', compact('data'));
     }
 
     public function searchTour(Request $request) {

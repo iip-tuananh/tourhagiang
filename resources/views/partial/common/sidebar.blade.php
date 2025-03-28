@@ -104,6 +104,56 @@
                 </ul>
             </li>
 
+            <li class="nav-item has-treeview  {{ request()->is('admin/spa') || request()->is('admin/spa/*') || request()->is('admin/spa') || request()->is('admin/spa/*') ? 'menu-open' : '' }} ">
+
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-feather"></i>
+                    <p>
+                        Orchild Spa
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('Spa.edit') }}" class="nav-link {{ Request::routeIs('Spa.edit') ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Spa</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('ServiceSpa.index') }}" class="nav-link {{ Request::routeIs('ServiceSpa.index') ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Danh sách dịch vụ</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('experience.index') }}" class="nav-link {{ Request::routeIs('experience.index') ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Danh sách trải nghiệm</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item has-treeview  {{ request()->is('admin/cloud-pool') || request()->is('admin/cloud-pool/*') || request()->is('admin/cloud-pool') || request()->is('admin/cloud-pool/*') ? 'menu-open' : '' }} ">
+
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-umbrella-beach"></i>
+                    <p>
+                        Cloud Pool
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('CloudPool.edit') }}" class="nav-link {{ Request::routeIs('CloudPool.edit') ? 'active' : '' }}">
+                            <i class="far fas  fa-angle-right nav-icon"></i>
+                            <p>Cloud Pool</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-item has-treeview  {{ request()->is('admin/stores') ||  request()->is('admin/banners') ||  request()->is('admin/origins') || request()->is('admin/manufacturers/*') || request()->is('admin/attributes') ? 'menu-open' : '' }} ">
 
                 <a href="#" class="nav-link">

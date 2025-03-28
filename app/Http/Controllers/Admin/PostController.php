@@ -159,7 +159,6 @@ class PostController extends Controller
 
 	public function update(Request $request, $id)
 	{
-
 		$validate = Validator::make(
 			$request->all(),
 			[

@@ -23,109 +23,7 @@
                     <p class="section-lead mx-auto fw-5 mb-0">Ba mươi sáu villa là ba mươi sáu không gian riêng tư, nằm dọc theo sườn núi, mở ra khung cảnh thiên nhiên rộng lớn, tràn ngập ánh sáng của núi rừng Tây Bắc.</p>
                 </div>
             </section>
-            <section class="acc-section-1 section pt-5 pb-0">
-                <div class="container text-center">
-                    <h2 class="section-title fs-1 ff-tertiary fw-bold text-primary-3 mb-3">Nghỉ dưỡng tại Avana</h2>
-                    <div class="section-lead paragraph text-primary-4 mw-890px mx-auto mb-0"><p>Hơn cả một kh&ocirc;ng gian nghỉ dưỡng sang trọng, Avana Retreat l&agrave; sự giao thoa giữa cảnh quan thi&ecirc;n nhi&ecirc;n miền n&uacute;i với di sản văn h&oacute;a địa phương. Thiết kế tường đất v&agrave; m&aacute;i lợp l&aacute; cọ khiến Avana nh&igrave;n từ xa giống hệt như một bản l&agrave;ng nhỏ, nằm lẩn khuất giữa m&agrave;u xanh n&uacute;i rừng.</p>
-                        <p>&nbsp;</p></div>
-                </div>
-                <div class="section-map map" id="map" style="background-image: url('https://avanaretreat.com/storage/2024/08/1722929802DSC02466-edit (1) copy.jpg')">
-                    <div class="map-item dropdown-center map-dropdown map-item-1">
-                        <a class="map-node" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0, 8" aria-expanded="false">
-                            <h6 class="map-node-title">Senna Hilltop Pool Villa 2PN</h6>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="card map-card">
-                                <h3 class="card-title pe-3">
-                                    <a href="#">Senna Hilltop Pool Villa 2PN</a>
-                                </h3>
-                                <p class="paragraph fs-sm mb-2"><p>Diện t&iacute;ch 229m2, 02 ph&ograve;ng ngủ, bể bơi nước n&oacute;ng ri&ecirc;ng đầu ti&ecirc;n tại miền n&uacute;i Việt Nam, th&iacute;ch hợp với gia đ&igrave;nh v&agrave; nh&oacute;m bạn.</p>
-                                <p>&nbsp;</p></p>
-                                <a class="card-more-link" href="#rooms-accommodation5" data-plugin="smooth-scroll">Xem thêm</a>
-                                <a class="card-close" href="#">
-                                    <i class="icont-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-item dropdown-center map-dropdown map-item-2">
-                        <a class="map-node" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0, 8" aria-expanded="false">
-                            <h6 class="map-node-title">Senna Hilltop Pool Villa 1PN</h6>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="card map-card">
-                                <h3 class="card-title pe-3">
-                                    <a href="#">Senna Hilltop Pool Villa 1PN</a>
-                                </h3>
-                                <p class="paragraph fs-sm mb-2"><p>Căn duy nhất tại Avana. Nằm tr&ecirc;n ruộng bậc thang, hướng nh&igrave;n thung lũng, c&oacute; bể bơi ri&ecirc;ng. Th&iacute;ch hợp với kỳ nghỉ l&atilde;ng mạn hoặc tuần trăng mật.</p>
-                                <p>&nbsp;</p>
-                                <p>&nbsp;</p></p>
-                                <a class="card-more-link" href="#rooms-accommodation4" data-plugin="smooth-scroll">Xem thêm</a>
-                                <a class="card-close" href="#">
-                                    <i class="icont-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-item dropdown-center map-dropdown map-item-3">
-                        <a class="map-node" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0, 8" aria-expanded="false">
-                            <h6 class="map-node-title">Ferns Grand Mountain Suite</h6>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="card map-card">
-                                <h3 class="card-title pe-3">
-                                    <a href="#">Ferns Grand Mountain Suite</a>
-                                </h3>
-                                <p class="paragraph fs-sm mb-2"><p>Thiết kế trang nh&atilde;, độc đ&aacute;o với ban c&ocirc;ng rộng 29m2. Đồ nội thất tinh tế, th&acirc;n thiện m&ocirc;i trường.</p>
-                                <p>&nbsp;</p></p>
-                                <a class="card-more-link" href="#rooms-accommodation3" data-plugin="smooth-scroll">Xem thêm</a>
-                                <a class="card-close" href="#">
-                                    <i class="icont-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-item dropdown-center map-dropdown map-item-4">
-                        <a class="map-node" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0, 8" aria-expanded="false">
-                            <h6 class="map-node-title">Lantana Mountain Bungalow 2PN</h6>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="card map-card">
-                                <h3 class="card-title pe-3">
-                                    <a href="#">Lantana Mountain Bungalow 2PN</a>
-                                </h3>
-                                <p class="paragraph fs-sm mb-2"><p>Mang &acirc;m hưởng của một kỳ nghỉ nhiệt đới. Với hai ph&ograve;ng ngủ ri&ecirc;ng biệt, Mountain Bungalow th&iacute;ch hợp với gia đ&igrave;nh hoặc nh&oacute;m bạn th&acirc;n.</p>
-                                <p>&nbsp;</p></p>
-                                <a class="card-more-link" href="#rooms-accommodation1" data-plugin="smooth-scroll">Xem thêm</a>
-                                <a class="card-close" href="#">
-                                    <i class="icont-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-item dropdown-center map-dropdown map-item-5">
-                        <a class="map-node" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0, 8" aria-expanded="false">
-                            <h6 class="map-node-title">Bauhinia Mountain Suite</h6>
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="card map-card">
-                                <h3 class="card-title pe-3">
-                                    <a href="#">Bauhinia Mountain Suite</a>
-                                </h3>
-                                <p class="paragraph fs-sm mb-2"><p>Thả m&igrave;nh thư gi&atilde;n trong kh&ocirc;ng gian sang trọng, ấm &aacute;p, với ban c&ocirc;ng nh&igrave;n ra thung lũng.</p>
-                                <p>&nbsp;</p></p>
-                                <a class="card-more-link" href="#rooms-accommodation2" data-plugin="smooth-scroll">Xem thêm</a>
-                                <a class="card-close" href="#">
-                                    <i class="icont-close"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-cta btn btn-lg rounded-pill map-cta btn-outline-light text-nowrap" href="https://avanaretreat.com/vn/dat-phong" role="button">Book your stay</a>
-                </div>
-            </section>
             <section class="acc-section-2">
-
                 @foreach($rooms as $key => $room)
                     @if($key % 2 == 0)
                         <div class="section-acc section mb-0" id="rooms-accommodation2">
@@ -259,9 +157,6 @@
                                             <div class="row g-3 justify-content-left">
                                                 <div class="col-sm-auto">
                                                     <a class="btn btn-cta btn-outline-primary fs-18px px-md-4 w-100" href="https://avanaretreat.com/vn/dat-phong" role="button">ĐẶT PHÒNG</a>
-                                                </div>
-                                                <div class="col-sm-auto">
-                                                    <a class="btn btn-cta btn-primary-3 fs-18px px-md-4 w-100" href="https://vrtour.avanaretreat.com/bauhinia" target="_blank" role="button">Xem VR Tour</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -176,7 +176,7 @@
                                                 <div class="row g-3 justify-content-left">
                                                     <div class="col-sm-auto">
                                                         <a class="btn btn-cta btn-outline-primary fs-18px px-md-4 w-100"
-                                                            href="https://avanaretreat.com/vn/dat-phong" role="button">ĐẶT
+                                                            href="#" role="button">ĐẶT
                                                             PHÒNG</a>
                                                     </div>
                                                 </div>
@@ -370,14 +370,14 @@
                                                 <div class="row g-3 justify-content-left">
                                                     <div class="col-sm-auto">
                                                         <a class="btn btn-cta btn-outline-primary fs-18px px-md-4 w-100"
-                                                            href="https://avanaretreat.com/vn/dat-phong"
+                                                            href="#"
                                                             role="button">ĐẶT PHÒNG</a>
                                                     </div>
-                                                    <div class="col-sm-auto">
-                                                        <a class="btn btn-cta btn-primary-3 fs-18px px-md-4 w-100"
-                                                            href="https://vrtour.avanaretreat.com/lantana/"
-                                                            target="_blank" role="button">Xem VR Tour</a>
-                                                    </div>
+{{--                                                    <div class="col-sm-auto">--}}
+{{--                                                        <a class="btn btn-cta btn-primary-3 fs-18px px-md-4 w-100"--}}
+{{--                                                            href="https://vrtour.avanaretreat.com/lantana/"--}}
+{{--                                                            target="_blank" role="button">Xem VR Tour</a>--}}
+{{--                                                    </div>--}}
                                                 </div>
                                             </div>
                                         </div>
@@ -423,328 +423,328 @@
                     @endif
                 @endforeach
             </section>
-            <section class="acc-section-3 section py-0">
-                <div class="container">
-                    <div class="tab">
-                        <div class="dropdown dropdown-nav">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" data-bs-offset="0, 0">Thông tin quan trọng</button>
-                            <div class="dropdown-menu">
-                                <div class="nav-responsive">
-                                    <div class="nav-responsive-inner">
-                                        <ul class="tab-nav nav nav-fill nav-style-1 nav-style-1-active-primary"
-                                            role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" href="#tab_241" data-bs-toggle="tab"
-                                                    role="tab" aria-controls="acc-s3-tab-info-guest"
-                                                    aria-selected="true">Thông tin quan trọng</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#tab_242" data-bs-toggle="tab" role="tab"
-                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Chính sách
-                                                    phòng và nhận trả phòng</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#tab_243" data-bs-toggle="tab" role="tab"
-                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Quy định
-                                                    khách đến thăm</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#tab_244" data-bs-toggle="tab" role="tab"
-                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Đặt phòng
-                                                    và đặt cọc</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " href="#tab_245" data-bs-toggle="tab" role="tab"
-                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Khoảng cách
-                                                    đến các điểm lân cận</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="tab_241">
-                                <div class="showmore">
-                                    <div class="collapse" id="acc-s3-showmore-info-guest">
-                                        <div class="paragraph fs-sm">
-                                            <p><strong>Phụ thu th&ecirc;m người</strong></p>
-                                            <p>Nếu số lượng kh&aacute;ch thực tế (bao gồm cả trẻ em) khi nhận ph&ograve;ng
-                                                vượt qu&aacute; số lượng quy định tr&ecirc;n x&aacute;c nhận, phụ ph&iacute;
-                                                th&ecirc;m người c&oacute; thể được &aacute;p dụng theo ch&iacute;nh
-                                                s&aacute;ch của resort.<br /><br /><strong>H&uacute;t thuốc</strong></p>
-                                            <p>C&aacute;c sản phẩm của thuốc l&aacute;, bao gồm thuốc l&aacute;, x&igrave;
-                                                g&agrave;, tẩu, thuốc l&aacute; điện tử, chất lỏng điện tử, thuốc l&aacute;
-                                                dạng h&iacute;t hoặc nhai, chỉ được ph&eacute;p sử dụng tại c&aacute;c khu
-                                                vực c&oacute; biển chỉ dẫn. Nếu sai quy định ph&iacute; phạt cho một lần vi
-                                                phạm l&agrave; 3.000.000 VNĐ.</p>
-                                            <p><strong>T&agrave;i sản c&aacute; nh&acirc;n</strong></p>
-                                            <p>Qu&yacute; kh&aacute;ch cần ch&uacute; &yacute; cửa ph&ograve;ng trong suốt
-                                                thời gian lưu tr&uacute;. Khu nghỉ kh&ocirc;ng chịu tr&aacute;ch nhiệm với
-                                                bất kỳ đồ c&aacute; nh&acirc;n, vật gi&aacute; trị n&agrave;o để lại trong
-                                                ph&ograve;ng. K&eacute;t an to&agrave;n trong ph&ograve;ng được khuyến
-                                                kh&iacute;ch sử dụng.</p>
-                                            <p><strong>Cơ sở vật chất khu nghỉ</strong></p>
-                                            <p>Qu&yacute; kh&aacute;ch sẽ chịu tr&aacute;ch nhiệm nếu l&agrave;m thất lạc
-                                                hay tổn hại đến cơ sở vật chất của khu nghỉ.</p>
-                                            <p><strong>Th&uacute; cưng</strong></p>
-                                            <p>Vật nu&ocirc;i kh&ocirc;ng được ph&eacute;p mang v&agrave;o resort.</p>
-                                            <p><strong>Đảm bảo sự ri&ecirc;ng tư</strong></p>
-                                            <p>Kh&ocirc;ng mang flycam, thiết bị bay kh&ocirc;ng người l&aacute;i, v&agrave;
-                                                c&aacute;c thiết bị &acirc;m thanh g&acirc;y ồn &agrave;o ảnh hưởng tới sự
-                                                an to&agrave;n v&agrave; t&iacute;nh ri&ecirc;ng tư của kh&aacute;ch.
-                                                Ph&iacute; phạt cho một lần vi phạm l&agrave; 3.000.000 VNĐ.</p>
-                                            <p><strong>Quy định an to&agrave;n</strong></p>
-                                            <p>Kh&ocirc;ng nấu ăn hoặc mang dụng cụ nấu ăn, đồ ăn c&oacute; m&ugrave;i
-                                                v&agrave;o trong ph&ograve;ng. Ph&iacute; phạt cho một lần vi phạm l&agrave;
-                                                5.000.000 VNĐ.<br />Kh&ocirc;ng mang ph&aacute;o hoa, chất dễ ch&aacute;y
-                                                nổ, chất g&acirc;y nghiện v&agrave; c&aacute;c chất cấm kh&aacute;c
-                                                v&agrave;o khu nghỉ. Ph&iacute; phạt cho một lần vi phạm l&agrave; 5.000.000
-                                                VNĐ.<br />Kh&ocirc;ng tr&egrave;o, bơi, hoặc lội xuống nước ở c&aacute;c khu
-                                                th&aacute;c trong khu&ocirc;n vi&ecirc;n khu nghỉ để đảm bảo an to&agrave;n
-                                                v&agrave; bảo vệ m&ocirc;i trường tự nhi&ecirc;n. Ph&iacute; phạt cho một
-                                                lần vi phạm l&agrave; 3.000.000 VNĐ.<br />Avana Retreat kh&ocirc;ng chịu
-                                                tr&aacute;ch nhiệm với bất kỳ tai nạn n&agrave;o xảy ra do việc kh&ocirc;ng
-                                                chấp h&agrave;nh c&aacute;c quy định n&oacute;i tr&ecirc;n.</p>
-                                            <p><strong>Đảm bảo sự an to&agrave;n cho trẻ em</strong></p>
-                                            <p><span style="font-weight: 400;">Để đảm bảo sự an to&agrave;n cho trẻ em
-                                                    trong kh&ocirc;ng gian nhiều đồi n&uacute;i, suối, th&aacute;c tại Avana
-                                                    Retreat, bố mẹ hoặc người gi&aacute;m hộ c&oacute; tr&aacute;ch nhiệm
-                                                    tr&ocirc;ng coi trẻ em dưới 16 tuổi trong suốt kỳ nghỉ. </span></p>
-                                            <p><strong>Chỗ đậu xe</strong></p>
-                                            <p>Chỗ đậu xe miễn ph&iacute; trong resort.</p>
-                                            <p><strong>Bền vững v&agrave; M&ocirc;i trường</strong></p>
-                                            <p>Avana Retreat nằm trong m&ocirc;i trường thi&ecirc;n nhi&ecirc;n đa dạng với
-                                                đồi, n&uacute;i, thung lũng, th&aacute;c nước, hồ c&aacute;, v&agrave; suối.
-                                                Ch&uacute;ng t&ocirc;i kh&ocirc;ng chịu bất kỳ tr&aacute;ch nhiệm n&agrave;o
-                                                li&ecirc;n quan đến rủi ro xảy ra nếu kh&aacute;ch kh&ocirc;ng thực hiện
-                                                theo c&aacute;c hướng dẫn về an to&agrave;n của Avana Retreat.<br />Sứ mệnh
-                                                của ch&uacute;ng t&ocirc;i l&agrave; x&acirc;y dựng một m&ocirc;i trường bền
-                                                vững cho kh&aacute;ch h&agrave;ng, nh&acirc;n vi&ecirc;n v&agrave; cộng đồng
-                                                địa phương. Việc sử dụng c&aacute;c sản phẩm nhựa, c&aacute;c h&agrave;nh vi
-                                                c&oacute; t&aacute;c động ti&ecirc;u cực đến m&ocirc;i trường đều
-                                                kh&ocirc;ng được ph&eacute;p.</p>
-                                        </div>
-                                    </div>
-                                    <div class="showmore-footer text-center">
-                                        <button class="btn showmore-btn collapsed" type="button"
-                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">
-                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">
-                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade " id="tab_242">
-                                <div class="showmore">
-                                    <div class="collapse" id="acc-s3-showmore-info-guest">
-                                        <div class="paragraph fs-sm">
-                                            <p><strong>Thời gian nhận v&agrave; trả ph&ograve;ng:</strong></p>
-                                            <p>Giờ nhận ph&ograve;ng v&agrave;o 14:00 v&agrave; trả ph&ograve;ng v&agrave;o
-                                                11:00. Bất k&igrave; sự gia hạn lưu tr&uacute; n&agrave;o cũng cần được
-                                                b&aacute;o trước với bộ phận lễ t&acirc;n.</p>
-                                            <p><strong>1. Lantana Mountain Bungalow</strong></p>
-                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa
-                                                s&aacute;ng cho bốn người lớn v&agrave; hai trẻ em dưới 6 tuổi, thuế
-                                                v&agrave; ph&iacute; dịch vụ.</p>
-                                            <p>Sức chứa tối đa: 4 người lớn v&agrave; 4 trẻ em HOẶC 6 người lớn v&agrave; 2
-                                                trẻ em</p>
-                                            <p><strong>2. Bauhinia Mountain Suite</strong></p>
-                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa
-                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế
-                                                v&agrave; ph&iacute; dịch vụ</p>
-                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1
-                                                trẻ em</p>
-                                            <p><strong>3. Ferns Grand Mountain Suite</strong></p>
-                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa
-                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế
-                                                v&agrave; ph&iacute; dịch vụ</p>
-                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1
-                                                trẻ em</p>
-                                            <p><strong>4. Senna Hilltop Pool Villa 1BR</strong></p>
-                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa
-                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế
-                                                v&agrave; ph&iacute; dịch vụ</p>
-                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1
-                                                trẻ em</p>
-                                            <p><strong>5. Senna Hilltop Pool Villa 2BR</strong></p>
-                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa
-                                                s&aacute;ng cho 4 người lớn v&agrave; 2 trẻ em dưới 6 tuổi, thuế v&agrave;
-                                                ph&iacute; dịch vụ</p>
-                                            <p>Sức chứa tối đa: 4 người lớn v&agrave; 4 trẻ em HOẶC 5 người lớn v&agrave; 3
-                                                trẻ em</p>
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </div>
-                                    <div class="showmore-footer text-center">
-                                        <button class="btn showmore-btn collapsed" type="button"
-                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">
-                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">
-                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade " id="tab_243">
-                                <div class="showmore">
-                                    <div class="collapse" id="acc-s3-showmore-info-guest">
-                                        <div class="paragraph fs-sm">
-                                            <ul>
-                                                <li>Tất cả th&ocirc;ng tin của kh&aacute;ch đến thăm cần được cung cấp tới
-                                                    nh&acirc;n vi&ecirc;n lễ t&acirc;n bao gồm: Số kh&aacute;ch, T&ecirc;n,
-                                                    Thời gian đến, Thời gian đi.</li>
-                                                <li>Kh&aacute;ch đến thăm cần lưu lại thẻ căn cước, chứng minh thư tại bộ
-                                                    phận bảo vệ.</li>
-                                                <li>Kh&aacute;ch đến thăm chỉ được thăm quan tại những khu vực c&ocirc;ng
-                                                    cộng, kh&ocirc;ng được ph&eacute;p v&agrave;o ph&ograve;ng của
-                                                    kh&aacute;ch lưu tr&uacute;.</li>
-                                                <li>Kh&aacute;ch lưu tr&uacute; vui l&ograve;ng đ&oacute;n kh&aacute;ch đến
-                                                    thăm tại sảnh lễ t&acirc;n.</li>
-                                                <li>Kh&aacute;ch đến thăm chỉ được lưu tr&uacute; kh&ocirc;ng mất ph&iacute;
-                                                    tối đa 2 tiếng. Qu&aacute; 2 tiếng sẽ t&iacute;nh ph&iacute;
-                                                    3,000,000VNĐ tr&ecirc;n kh&aacute;ch. Qu&aacute; 6 tiếng sẽ t&iacute;nh
-                                                    ph&iacute; 6,000,000VNĐ tr&ecirc;n kh&aacute;ch. Tất cả c&aacute;c
-                                                    h&oacute;a đơn thu ph&iacute; sẽ được cộng v&agrave;o h&oacute;a đơn
-                                                    ph&ograve;ng kh&aacute;ch đang lưu tr&uacute;.</li>
-                                                <li>Kh&aacute;ch đến thăm phải rời khu nghỉ trước 17:00.</li>
-                                                <li>Ch&uacute;ng t&ocirc;i kh&ocirc;ng cho ph&eacute;p những đơn vị
-                                                    b&ecirc;n thứ 3 v&agrave;o thăm khu nghỉ như: Nhiếp ảnh gia chuy&ecirc;n
-                                                    nghiệp, chuy&ecirc;n gia l&agrave;m đẹp, nghệ sĩ giải tr&iacute;&hellip;
-                                                </li>
-                                            </ul>
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </div>
-                                    <div class="showmore-footer text-center">
-                                        <button class="btn showmore-btn collapsed" type="button"
-                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">
-                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">
-                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade " id="tab_244">
-                                <div class="showmore">
-                                    <div class="collapse" id="acc-s3-showmore-info-guest">
-                                        <div class="paragraph fs-sm">
-                                            <p><strong>Điều khoản về Đặt ph&ograve;ng &amp; Đặt cọc</strong></p>
-                                            <p>Bằng việc đặt ph&ograve;ng với ch&uacute;ng t&ocirc;i (chủ sở hữu / người đại
-                                                diện của chủ sở hữu), bạn (kh&aacute;ch ch&iacute;nh) v&agrave; đối
-                                                t&aacute;c đặt ph&ograve;ng của bạn (kh&aacute;ch) đồng &yacute; với
-                                                c&aacute;c điều khoản v&agrave; điều kiện dưới đ&acirc;y. Trong thời gian
-                                                lưu tr&uacute;, bạn đồng &yacute; tu&acirc;n thủ c&aacute;c điều kiện tiếp
-                                                theo như đ&atilde; đề ra. Nếu bạn c&oacute; bất kỳ c&acirc;u hỏi n&agrave;o
-                                                về việc đặt ph&ograve;ng, vui l&ograve;ng li&ecirc;n hệ trước khi đặt
-                                                ph&ograve;ng.</p>
-                                            <p><strong>Hướng dẫn &amp; Hạn chế về virus Corona</strong></p>
-                                            <p>C&aacute;c hướng dẫn v&agrave; hạn chế về virus Corona được &aacute;p dụng
-                                                tại Avana Retreat ph&ugrave; hợp với hướng dẫn hiện h&agrave;nh của địa
-                                                phương v&agrave; quốc gia.</p>
-                                            <p><strong>Quy tr&igrave;nh đặt ph&ograve;ng</strong></p>
-                                            <p>Để đặt ph&ograve;ng Avana Retreat, kh&aacute;ch ch&iacute;nh phải từ 18 tuổi
-                                                trở l&ecirc;n. Số lượng kh&aacute;ch lưu tr&uacute; tối đa cho mỗi
-                                                ph&ograve;ng được ghi r&otilde; trong Ch&iacute;nh s&aacute;ch Ph&ograve;ng
-                                                hoặc tr&ecirc;n tr&ecirc;n web của Avana Retreat. Trong trường hợp người đặt
-                                                ph&ograve;ng kh&aacute;c với kh&aacute;ch ch&iacute;nh, người đặt
-                                                ph&ograve;ng c&oacute; thể sẽ phải chịu tr&aacute;ch nhiệm về việc hủy
-                                                ph&ograve;ng, kh&ocirc;ng đến v&agrave; những thiệt hại theo như quy định
-                                                của Avana Retreat. Chỉ kh&aacute;ch ch&iacute;nh v&agrave; người c&oacute;
-                                                t&ecirc;n đặt ph&ograve;ng mới được ph&eacute;p sử dụng t&agrave;i sản
-                                                v&agrave; c&aacute;c tiện nghi của Avana Retreat, bất kỳ kh&aacute;ch
-                                                b&ecirc;n thứ ba n&agrave;o cũng chỉ được ph&eacute;p truy cập khi c&oacute;
-                                                sự cho ph&eacute;p r&otilde; r&agrave;ng v&agrave; cụ thể của ch&uacute;ng
-                                                t&ocirc;i.</p>
-                                            <p>Bạn c&oacute; thể thanh to&aacute;n trực tuyến hoặc chuyển khoản.
-                                                Kh&aacute;ch h&agrave;ng ch&iacute;nh sẽ phải ho&agrave;n trả cho ng&acirc;n
-                                                h&agrave;ng của ch&uacute;ng t&ocirc;i c&aacute;c khoản ph&iacute;
-                                                ph&aacute;t sinh n&agrave;o để xử l&yacute; thẻ t&iacute;n dụng hoặc chuyển
-                                                khoản bị từ chối trong v&ograve;ng bảy (7) ng&agrave;y kể từ khi c&oacute;
-                                                y&ecirc;u cầu thực hiện.</p>
-                                            <p>Kh&aacute;ch h&agrave;ng của Avana Retreat đồng &yacute; t&ocirc;n trọng sự
-                                                ri&ecirc;ng tư v&agrave; y&ecirc;n tĩnh của c&aacute;c kh&aacute;ch lưu
-                                                tr&uacute; kh&aacute;c. Ch&uacute;ng t&ocirc;i c&oacute; quyền hủy đặt
-                                                ph&ograve;ng c&oacute; hiệu lực ngay lập tức nếu kh&aacute;ch kh&ocirc;ng
-                                                t&ocirc;n trọng thỏa thuận n&agrave;y, hoặc g&acirc;y phiền h&agrave; /
-                                                phiền to&aacute;i cho những kh&aacute;ch kh&aacute;c.</p>
-                                            <p><strong>C&aacute;c điều kiện hủy, đặt cọc trả lại &amp; kh&ocirc;ng c&oacute;
-                                                    mặt</strong></p>
-                                            <p>Kh&aacute;ch h&agrave;ng c&oacute; nhu cầu hủy đặt ph&ograve;ng vui
-                                                l&ograve;ng li&ecirc;n hệ với ch&uacute;ng t&ocirc;i c&agrave;ng sớm
-                                                c&agrave;ng tốt, t&ugrave;y thuộc v&agrave;o ch&iacute;nh s&aacute;ch hủy
-                                                đặt ph&ograve;ng của qu&yacute; kh&aacute;ch. Kh&aacute;ch đặt ph&ograve;ng
-                                                n&ecirc;n mua bảo hiểm hủy / chuyến đi ph&ugrave; hợp nếu c&oacute;
-                                                y&ecirc;u cầu.</p>
-                                            <p>Trong trường hợp hiếm hoi ch&uacute;ng t&ocirc;i cần hủy đặt ph&ograve;ng của
-                                                bạn, xin lưu &yacute; rằng ch&uacute;ng t&ocirc;i kh&ocirc;ng thể chịu
-                                                tr&aacute;ch nhiệm cho những trường hợp nằm ngo&agrave;i tầm kiểm
-                                                so&aacute;t; tr&aacute;ch nhiệm của ch&uacute;ng t&ocirc;i đối với bạn chỉ
-                                                giới hạn ở việc ho&agrave;n trả bất kỳ khoản thanh to&aacute;n n&agrave;o
-                                                đ&atilde; được thực hiện.</p>
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </div>
-                                    <div class="showmore-footer text-center">
-                                        <button class="btn showmore-btn collapsed" type="button"
-                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">
-                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">
-                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade " id="tab_245">
-                                <div class="showmore">
-                                    <div class="collapse" id="acc-s3-showmore-info-guest">
-                                        <div class="paragraph fs-sm">
-                                            <p><strong>Từ th&agrave;nh phố H&agrave; Nội:</strong>&nbsp;165km (4 giờ &ocirc;
-                                                t&ocirc;)</p>
-                                            <p><strong>Từ s&acirc;n bay Nội B&agrave;i:</strong>&nbsp;185km (4 giờ &ocirc;
-                                                t&ocirc;)</p>
-                                            <p><strong>Từ th&agrave;nh phố Ninh B&igrave;nh:</strong>&nbsp;160km (4 giờ
-                                                &ocirc; t&ocirc;)</p>
-                                            <p><strong>Từ P&ugrave; Lu&ocirc;ng, Thanh H&oacute;a:</strong>&nbsp;50km (1.5
-                                                giờ &ocirc; t&ocirc;)</p>
-                                            <p><strong>Từ thị trấn Mộc Ch&acirc;u:</strong>&nbsp;90km (2 giờ &ocirc;
-                                                t&ocirc;)</p>
-                                            <p><strong>Từ s&acirc;n bay C&aacute;t Bi:</strong>&nbsp;290km (6 giờ &ocirc;
-                                                t&ocirc;)</p>
-                                            <p><strong>Từ th&agrave;nh phố Hạ Long:</strong>&nbsp;315km (6 giờ &ocirc;
-                                                t&ocirc;)</p>
-                                            <p>Gi&uacute;p bạn thuận tiện di chuyển, Avana Retreat cung cấp dịch vụ đưa
-                                                đ&oacute;n xe ri&ecirc;ng (c&oacute; t&iacute;nh ph&iacute;). Vui
-                                                l&ograve;ng gửi th&ocirc;ng tin v&agrave;o email sau để đặt xe đưa
-                                                đ&oacute;n cho kỳ nghỉ của bạn:&nbsp;<a
-                                                    href="/cdn-cgi/l/email-protection#80e9eef1f5e9f2e9e5f3c0e1f6e1eee1f2e5f4f2e5e1f4aee3efed"><span
-                                                        class="__cf_email__"
-                                                        data-cfemail="b6dfd8c7c3dfc4dfd3c5f6d7c0d7d8d7c4d3c2c4d3d7c298d5d9db">[email&#160;protected]</span></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="showmore-footer text-center">
-                                        <button class="btn showmore-btn collapsed" type="button"
-                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"
-                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">
-                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">
-                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+{{--            <section class="acc-section-3 section py-0">--}}
+{{--                <div class="container">--}}
+{{--                    <div class="tab">--}}
+{{--                        <div class="dropdown dropdown-nav">--}}
+{{--                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"--}}
+{{--                                aria-expanded="false" data-bs-offset="0, 0">Thông tin quan trọng</button>--}}
+{{--                            <div class="dropdown-menu">--}}
+{{--                                <div class="nav-responsive">--}}
+{{--                                    <div class="nav-responsive-inner">--}}
+{{--                                        <ul class="tab-nav nav nav-fill nav-style-1 nav-style-1-active-primary"--}}
+{{--                                            role="tablist">--}}
+{{--                                            <li class="nav-item">--}}
+{{--                                                <a class="nav-link active" href="#tab_241" data-bs-toggle="tab"--}}
+{{--                                                    role="tab" aria-controls="acc-s3-tab-info-guest"--}}
+{{--                                                    aria-selected="true">Thông tin quan trọng</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="nav-item">--}}
+{{--                                                <a class="nav-link " href="#tab_242" data-bs-toggle="tab" role="tab"--}}
+{{--                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Chính sách--}}
+{{--                                                    phòng và nhận trả phòng</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="nav-item">--}}
+{{--                                                <a class="nav-link " href="#tab_243" data-bs-toggle="tab" role="tab"--}}
+{{--                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Quy định--}}
+{{--                                                    khách đến thăm</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="nav-item">--}}
+{{--                                                <a class="nav-link " href="#tab_244" data-bs-toggle="tab" role="tab"--}}
+{{--                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Đặt phòng--}}
+{{--                                                    và đặt cọc</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li class="nav-item">--}}
+{{--                                                <a class="nav-link " href="#tab_245" data-bs-toggle="tab" role="tab"--}}
+{{--                                                    aria-controls="acc-s3-tab-info-guest" aria-selected="true">Khoảng cách--}}
+{{--                                                    đến các điểm lân cận</a>--}}
+{{--                                            </li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="tab-content">--}}
+{{--                            <div class="tab-pane fade show active" id="tab_241">--}}
+{{--                                <div class="showmore">--}}
+{{--                                    <div class="collapse" id="acc-s3-showmore-info-guest">--}}
+{{--                                        <div class="paragraph fs-sm">--}}
+{{--                                            <p><strong>Phụ thu th&ecirc;m người</strong></p>--}}
+{{--                                            <p>Nếu số lượng kh&aacute;ch thực tế (bao gồm cả trẻ em) khi nhận ph&ograve;ng--}}
+{{--                                                vượt qu&aacute; số lượng quy định tr&ecirc;n x&aacute;c nhận, phụ ph&iacute;--}}
+{{--                                                th&ecirc;m người c&oacute; thể được &aacute;p dụng theo ch&iacute;nh--}}
+{{--                                                s&aacute;ch của resort.<br /><br /><strong>H&uacute;t thuốc</strong></p>--}}
+{{--                                            <p>C&aacute;c sản phẩm của thuốc l&aacute;, bao gồm thuốc l&aacute;, x&igrave;--}}
+{{--                                                g&agrave;, tẩu, thuốc l&aacute; điện tử, chất lỏng điện tử, thuốc l&aacute;--}}
+{{--                                                dạng h&iacute;t hoặc nhai, chỉ được ph&eacute;p sử dụng tại c&aacute;c khu--}}
+{{--                                                vực c&oacute; biển chỉ dẫn. Nếu sai quy định ph&iacute; phạt cho một lần vi--}}
+{{--                                                phạm l&agrave; 3.000.000 VNĐ.</p>--}}
+{{--                                            <p><strong>T&agrave;i sản c&aacute; nh&acirc;n</strong></p>--}}
+{{--                                            <p>Qu&yacute; kh&aacute;ch cần ch&uacute; &yacute; cửa ph&ograve;ng trong suốt--}}
+{{--                                                thời gian lưu tr&uacute;. Khu nghỉ kh&ocirc;ng chịu tr&aacute;ch nhiệm với--}}
+{{--                                                bất kỳ đồ c&aacute; nh&acirc;n, vật gi&aacute; trị n&agrave;o để lại trong--}}
+{{--                                                ph&ograve;ng. K&eacute;t an to&agrave;n trong ph&ograve;ng được khuyến--}}
+{{--                                                kh&iacute;ch sử dụng.</p>--}}
+{{--                                            <p><strong>Cơ sở vật chất khu nghỉ</strong></p>--}}
+{{--                                            <p>Qu&yacute; kh&aacute;ch sẽ chịu tr&aacute;ch nhiệm nếu l&agrave;m thất lạc--}}
+{{--                                                hay tổn hại đến cơ sở vật chất của khu nghỉ.</p>--}}
+{{--                                            <p><strong>Th&uacute; cưng</strong></p>--}}
+{{--                                            <p>Vật nu&ocirc;i kh&ocirc;ng được ph&eacute;p mang v&agrave;o resort.</p>--}}
+{{--                                            <p><strong>Đảm bảo sự ri&ecirc;ng tư</strong></p>--}}
+{{--                                            <p>Kh&ocirc;ng mang flycam, thiết bị bay kh&ocirc;ng người l&aacute;i, v&agrave;--}}
+{{--                                                c&aacute;c thiết bị &acirc;m thanh g&acirc;y ồn &agrave;o ảnh hưởng tới sự--}}
+{{--                                                an to&agrave;n v&agrave; t&iacute;nh ri&ecirc;ng tư của kh&aacute;ch.--}}
+{{--                                                Ph&iacute; phạt cho một lần vi phạm l&agrave; 3.000.000 VNĐ.</p>--}}
+{{--                                            <p><strong>Quy định an to&agrave;n</strong></p>--}}
+{{--                                            <p>Kh&ocirc;ng nấu ăn hoặc mang dụng cụ nấu ăn, đồ ăn c&oacute; m&ugrave;i--}}
+{{--                                                v&agrave;o trong ph&ograve;ng. Ph&iacute; phạt cho một lần vi phạm l&agrave;--}}
+{{--                                                5.000.000 VNĐ.<br />Kh&ocirc;ng mang ph&aacute;o hoa, chất dễ ch&aacute;y--}}
+{{--                                                nổ, chất g&acirc;y nghiện v&agrave; c&aacute;c chất cấm kh&aacute;c--}}
+{{--                                                v&agrave;o khu nghỉ. Ph&iacute; phạt cho một lần vi phạm l&agrave; 5.000.000--}}
+{{--                                                VNĐ.<br />Kh&ocirc;ng tr&egrave;o, bơi, hoặc lội xuống nước ở c&aacute;c khu--}}
+{{--                                                th&aacute;c trong khu&ocirc;n vi&ecirc;n khu nghỉ để đảm bảo an to&agrave;n--}}
+{{--                                                v&agrave; bảo vệ m&ocirc;i trường tự nhi&ecirc;n. Ph&iacute; phạt cho một--}}
+{{--                                                lần vi phạm l&agrave; 3.000.000 VNĐ.<br />Avana Retreat kh&ocirc;ng chịu--}}
+{{--                                                tr&aacute;ch nhiệm với bất kỳ tai nạn n&agrave;o xảy ra do việc kh&ocirc;ng--}}
+{{--                                                chấp h&agrave;nh c&aacute;c quy định n&oacute;i tr&ecirc;n.</p>--}}
+{{--                                            <p><strong>Đảm bảo sự an to&agrave;n cho trẻ em</strong></p>--}}
+{{--                                            <p><span style="font-weight: 400;">Để đảm bảo sự an to&agrave;n cho trẻ em--}}
+{{--                                                    trong kh&ocirc;ng gian nhiều đồi n&uacute;i, suối, th&aacute;c tại Avana--}}
+{{--                                                    Retreat, bố mẹ hoặc người gi&aacute;m hộ c&oacute; tr&aacute;ch nhiệm--}}
+{{--                                                    tr&ocirc;ng coi trẻ em dưới 16 tuổi trong suốt kỳ nghỉ. </span></p>--}}
+{{--                                            <p><strong>Chỗ đậu xe</strong></p>--}}
+{{--                                            <p>Chỗ đậu xe miễn ph&iacute; trong resort.</p>--}}
+{{--                                            <p><strong>Bền vững v&agrave; M&ocirc;i trường</strong></p>--}}
+{{--                                            <p>Avana Retreat nằm trong m&ocirc;i trường thi&ecirc;n nhi&ecirc;n đa dạng với--}}
+{{--                                                đồi, n&uacute;i, thung lũng, th&aacute;c nước, hồ c&aacute;, v&agrave; suối.--}}
+{{--                                                Ch&uacute;ng t&ocirc;i kh&ocirc;ng chịu bất kỳ tr&aacute;ch nhiệm n&agrave;o--}}
+{{--                                                li&ecirc;n quan đến rủi ro xảy ra nếu kh&aacute;ch kh&ocirc;ng thực hiện--}}
+{{--                                                theo c&aacute;c hướng dẫn về an to&agrave;n của Avana Retreat.<br />Sứ mệnh--}}
+{{--                                                của ch&uacute;ng t&ocirc;i l&agrave; x&acirc;y dựng một m&ocirc;i trường bền--}}
+{{--                                                vững cho kh&aacute;ch h&agrave;ng, nh&acirc;n vi&ecirc;n v&agrave; cộng đồng--}}
+{{--                                                địa phương. Việc sử dụng c&aacute;c sản phẩm nhựa, c&aacute;c h&agrave;nh vi--}}
+{{--                                                c&oacute; t&aacute;c động ti&ecirc;u cực đến m&ocirc;i trường đều--}}
+{{--                                                kh&ocirc;ng được ph&eacute;p.</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="showmore-footer text-center">--}}
+{{--                                        <button class="btn showmore-btn collapsed" type="button"--}}
+{{--                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"--}}
+{{--                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">--}}
+{{--                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">--}}
+{{--                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>--}}
+{{--                                            </svg>--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="tab-pane fade " id="tab_242">--}}
+{{--                                <div class="showmore">--}}
+{{--                                    <div class="collapse" id="acc-s3-showmore-info-guest">--}}
+{{--                                        <div class="paragraph fs-sm">--}}
+{{--                                            <p><strong>Thời gian nhận v&agrave; trả ph&ograve;ng:</strong></p>--}}
+{{--                                            <p>Giờ nhận ph&ograve;ng v&agrave;o 14:00 v&agrave; trả ph&ograve;ng v&agrave;o--}}
+{{--                                                11:00. Bất k&igrave; sự gia hạn lưu tr&uacute; n&agrave;o cũng cần được--}}
+{{--                                                b&aacute;o trước với bộ phận lễ t&acirc;n.</p>--}}
+{{--                                            <p><strong>1. Lantana Mountain Bungalow</strong></p>--}}
+{{--                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa--}}
+{{--                                                s&aacute;ng cho bốn người lớn v&agrave; hai trẻ em dưới 6 tuổi, thuế--}}
+{{--                                                v&agrave; ph&iacute; dịch vụ.</p>--}}
+{{--                                            <p>Sức chứa tối đa: 4 người lớn v&agrave; 4 trẻ em HOẶC 6 người lớn v&agrave; 2--}}
+{{--                                                trẻ em</p>--}}
+{{--                                            <p><strong>2. Bauhinia Mountain Suite</strong></p>--}}
+{{--                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa--}}
+{{--                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế--}}
+{{--                                                v&agrave; ph&iacute; dịch vụ</p>--}}
+{{--                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1--}}
+{{--                                                trẻ em</p>--}}
+{{--                                            <p><strong>3. Ferns Grand Mountain Suite</strong></p>--}}
+{{--                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa--}}
+{{--                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế--}}
+{{--                                                v&agrave; ph&iacute; dịch vụ</p>--}}
+{{--                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1--}}
+{{--                                                trẻ em</p>--}}
+{{--                                            <p><strong>4. Senna Hilltop Pool Villa 1BR</strong></p>--}}
+{{--                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa--}}
+{{--                                                s&aacute;ng cho hai người lớn v&agrave; một trẻ em dưới 6 tuổi, thuế--}}
+{{--                                                v&agrave; ph&iacute; dịch vụ</p>--}}
+{{--                                            <p>Sức chứa tối đa: 2 người lớn v&agrave; 2 trẻ em HOẶC 3 người lớn v&agrave; 1--}}
+{{--                                                trẻ em</p>--}}
+{{--                                            <p><strong>5. Senna Hilltop Pool Villa 2BR</strong></p>--}}
+{{--                                            <p>Ti&ecirc;u chuẩn ph&ograve;ng: Gi&aacute; ph&ograve;ng đ&atilde; bao gồm bữa--}}
+{{--                                                s&aacute;ng cho 4 người lớn v&agrave; 2 trẻ em dưới 6 tuổi, thuế v&agrave;--}}
+{{--                                                ph&iacute; dịch vụ</p>--}}
+{{--                                            <p>Sức chứa tối đa: 4 người lớn v&agrave; 4 trẻ em HOẶC 5 người lớn v&agrave; 3--}}
+{{--                                                trẻ em</p>--}}
+{{--                                            <p>&nbsp;</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="showmore-footer text-center">--}}
+{{--                                        <button class="btn showmore-btn collapsed" type="button"--}}
+{{--                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"--}}
+{{--                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">--}}
+{{--                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">--}}
+{{--                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>--}}
+{{--                                            </svg>--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="tab-pane fade " id="tab_243">--}}
+{{--                                <div class="showmore">--}}
+{{--                                    <div class="collapse" id="acc-s3-showmore-info-guest">--}}
+{{--                                        <div class="paragraph fs-sm">--}}
+{{--                                            <ul>--}}
+{{--                                                <li>Tất cả th&ocirc;ng tin của kh&aacute;ch đến thăm cần được cung cấp tới--}}
+{{--                                                    nh&acirc;n vi&ecirc;n lễ t&acirc;n bao gồm: Số kh&aacute;ch, T&ecirc;n,--}}
+{{--                                                    Thời gian đến, Thời gian đi.</li>--}}
+{{--                                                <li>Kh&aacute;ch đến thăm cần lưu lại thẻ căn cước, chứng minh thư tại bộ--}}
+{{--                                                    phận bảo vệ.</li>--}}
+{{--                                                <li>Kh&aacute;ch đến thăm chỉ được thăm quan tại những khu vực c&ocirc;ng--}}
+{{--                                                    cộng, kh&ocirc;ng được ph&eacute;p v&agrave;o ph&ograve;ng của--}}
+{{--                                                    kh&aacute;ch lưu tr&uacute;.</li>--}}
+{{--                                                <li>Kh&aacute;ch lưu tr&uacute; vui l&ograve;ng đ&oacute;n kh&aacute;ch đến--}}
+{{--                                                    thăm tại sảnh lễ t&acirc;n.</li>--}}
+{{--                                                <li>Kh&aacute;ch đến thăm chỉ được lưu tr&uacute; kh&ocirc;ng mất ph&iacute;--}}
+{{--                                                    tối đa 2 tiếng. Qu&aacute; 2 tiếng sẽ t&iacute;nh ph&iacute;--}}
+{{--                                                    3,000,000VNĐ tr&ecirc;n kh&aacute;ch. Qu&aacute; 6 tiếng sẽ t&iacute;nh--}}
+{{--                                                    ph&iacute; 6,000,000VNĐ tr&ecirc;n kh&aacute;ch. Tất cả c&aacute;c--}}
+{{--                                                    h&oacute;a đơn thu ph&iacute; sẽ được cộng v&agrave;o h&oacute;a đơn--}}
+{{--                                                    ph&ograve;ng kh&aacute;ch đang lưu tr&uacute;.</li>--}}
+{{--                                                <li>Kh&aacute;ch đến thăm phải rời khu nghỉ trước 17:00.</li>--}}
+{{--                                                <li>Ch&uacute;ng t&ocirc;i kh&ocirc;ng cho ph&eacute;p những đơn vị--}}
+{{--                                                    b&ecirc;n thứ 3 v&agrave;o thăm khu nghỉ như: Nhiếp ảnh gia chuy&ecirc;n--}}
+{{--                                                    nghiệp, chuy&ecirc;n gia l&agrave;m đẹp, nghệ sĩ giải tr&iacute;&hellip;--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                            <p>&nbsp;</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="showmore-footer text-center">--}}
+{{--                                        <button class="btn showmore-btn collapsed" type="button"--}}
+{{--                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"--}}
+{{--                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">--}}
+{{--                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">--}}
+{{--                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>--}}
+{{--                                            </svg>--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="tab-pane fade " id="tab_244">--}}
+{{--                                <div class="showmore">--}}
+{{--                                    <div class="collapse" id="acc-s3-showmore-info-guest">--}}
+{{--                                        <div class="paragraph fs-sm">--}}
+{{--                                            <p><strong>Điều khoản về Đặt ph&ograve;ng &amp; Đặt cọc</strong></p>--}}
+{{--                                            <p>Bằng việc đặt ph&ograve;ng với ch&uacute;ng t&ocirc;i (chủ sở hữu / người đại--}}
+{{--                                                diện của chủ sở hữu), bạn (kh&aacute;ch ch&iacute;nh) v&agrave; đối--}}
+{{--                                                t&aacute;c đặt ph&ograve;ng của bạn (kh&aacute;ch) đồng &yacute; với--}}
+{{--                                                c&aacute;c điều khoản v&agrave; điều kiện dưới đ&acirc;y. Trong thời gian--}}
+{{--                                                lưu tr&uacute;, bạn đồng &yacute; tu&acirc;n thủ c&aacute;c điều kiện tiếp--}}
+{{--                                                theo như đ&atilde; đề ra. Nếu bạn c&oacute; bất kỳ c&acirc;u hỏi n&agrave;o--}}
+{{--                                                về việc đặt ph&ograve;ng, vui l&ograve;ng li&ecirc;n hệ trước khi đặt--}}
+{{--                                                ph&ograve;ng.</p>--}}
+{{--                                            <p><strong>Hướng dẫn &amp; Hạn chế về virus Corona</strong></p>--}}
+{{--                                            <p>C&aacute;c hướng dẫn v&agrave; hạn chế về virus Corona được &aacute;p dụng--}}
+{{--                                                tại Avana Retreat ph&ugrave; hợp với hướng dẫn hiện h&agrave;nh của địa--}}
+{{--                                                phương v&agrave; quốc gia.</p>--}}
+{{--                                            <p><strong>Quy tr&igrave;nh đặt ph&ograve;ng</strong></p>--}}
+{{--                                            <p>Để đặt ph&ograve;ng Avana Retreat, kh&aacute;ch ch&iacute;nh phải từ 18 tuổi--}}
+{{--                                                trở l&ecirc;n. Số lượng kh&aacute;ch lưu tr&uacute; tối đa cho mỗi--}}
+{{--                                                ph&ograve;ng được ghi r&otilde; trong Ch&iacute;nh s&aacute;ch Ph&ograve;ng--}}
+{{--                                                hoặc tr&ecirc;n tr&ecirc;n web của Avana Retreat. Trong trường hợp người đặt--}}
+{{--                                                ph&ograve;ng kh&aacute;c với kh&aacute;ch ch&iacute;nh, người đặt--}}
+{{--                                                ph&ograve;ng c&oacute; thể sẽ phải chịu tr&aacute;ch nhiệm về việc hủy--}}
+{{--                                                ph&ograve;ng, kh&ocirc;ng đến v&agrave; những thiệt hại theo như quy định--}}
+{{--                                                của Avana Retreat. Chỉ kh&aacute;ch ch&iacute;nh v&agrave; người c&oacute;--}}
+{{--                                                t&ecirc;n đặt ph&ograve;ng mới được ph&eacute;p sử dụng t&agrave;i sản--}}
+{{--                                                v&agrave; c&aacute;c tiện nghi của Avana Retreat, bất kỳ kh&aacute;ch--}}
+{{--                                                b&ecirc;n thứ ba n&agrave;o cũng chỉ được ph&eacute;p truy cập khi c&oacute;--}}
+{{--                                                sự cho ph&eacute;p r&otilde; r&agrave;ng v&agrave; cụ thể của ch&uacute;ng--}}
+{{--                                                t&ocirc;i.</p>--}}
+{{--                                            <p>Bạn c&oacute; thể thanh to&aacute;n trực tuyến hoặc chuyển khoản.--}}
+{{--                                                Kh&aacute;ch h&agrave;ng ch&iacute;nh sẽ phải ho&agrave;n trả cho ng&acirc;n--}}
+{{--                                                h&agrave;ng của ch&uacute;ng t&ocirc;i c&aacute;c khoản ph&iacute;--}}
+{{--                                                ph&aacute;t sinh n&agrave;o để xử l&yacute; thẻ t&iacute;n dụng hoặc chuyển--}}
+{{--                                                khoản bị từ chối trong v&ograve;ng bảy (7) ng&agrave;y kể từ khi c&oacute;--}}
+{{--                                                y&ecirc;u cầu thực hiện.</p>--}}
+{{--                                            <p>Kh&aacute;ch h&agrave;ng của Avana Retreat đồng &yacute; t&ocirc;n trọng sự--}}
+{{--                                                ri&ecirc;ng tư v&agrave; y&ecirc;n tĩnh của c&aacute;c kh&aacute;ch lưu--}}
+{{--                                                tr&uacute; kh&aacute;c. Ch&uacute;ng t&ocirc;i c&oacute; quyền hủy đặt--}}
+{{--                                                ph&ograve;ng c&oacute; hiệu lực ngay lập tức nếu kh&aacute;ch kh&ocirc;ng--}}
+{{--                                                t&ocirc;n trọng thỏa thuận n&agrave;y, hoặc g&acirc;y phiền h&agrave; /--}}
+{{--                                                phiền to&aacute;i cho những kh&aacute;ch kh&aacute;c.</p>--}}
+{{--                                            <p><strong>C&aacute;c điều kiện hủy, đặt cọc trả lại &amp; kh&ocirc;ng c&oacute;--}}
+{{--                                                    mặt</strong></p>--}}
+{{--                                            <p>Kh&aacute;ch h&agrave;ng c&oacute; nhu cầu hủy đặt ph&ograve;ng vui--}}
+{{--                                                l&ograve;ng li&ecirc;n hệ với ch&uacute;ng t&ocirc;i c&agrave;ng sớm--}}
+{{--                                                c&agrave;ng tốt, t&ugrave;y thuộc v&agrave;o ch&iacute;nh s&aacute;ch hủy--}}
+{{--                                                đặt ph&ograve;ng của qu&yacute; kh&aacute;ch. Kh&aacute;ch đặt ph&ograve;ng--}}
+{{--                                                n&ecirc;n mua bảo hiểm hủy / chuyến đi ph&ugrave; hợp nếu c&oacute;--}}
+{{--                                                y&ecirc;u cầu.</p>--}}
+{{--                                            <p>Trong trường hợp hiếm hoi ch&uacute;ng t&ocirc;i cần hủy đặt ph&ograve;ng của--}}
+{{--                                                bạn, xin lưu &yacute; rằng ch&uacute;ng t&ocirc;i kh&ocirc;ng thể chịu--}}
+{{--                                                tr&aacute;ch nhiệm cho những trường hợp nằm ngo&agrave;i tầm kiểm--}}
+{{--                                                so&aacute;t; tr&aacute;ch nhiệm của ch&uacute;ng t&ocirc;i đối với bạn chỉ--}}
+{{--                                                giới hạn ở việc ho&agrave;n trả bất kỳ khoản thanh to&aacute;n n&agrave;o--}}
+{{--                                                đ&atilde; được thực hiện.</p>--}}
+{{--                                            <p>&nbsp;</p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="showmore-footer text-center">--}}
+{{--                                        <button class="btn showmore-btn collapsed" type="button"--}}
+{{--                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"--}}
+{{--                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">--}}
+{{--                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">--}}
+{{--                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>--}}
+{{--                                            </svg>--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="tab-pane fade " id="tab_245">--}}
+{{--                                <div class="showmore">--}}
+{{--                                    <div class="collapse" id="acc-s3-showmore-info-guest">--}}
+{{--                                        <div class="paragraph fs-sm">--}}
+{{--                                            <p><strong>Từ th&agrave;nh phố H&agrave; Nội:</strong>&nbsp;165km (4 giờ &ocirc;--}}
+{{--                                                t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ s&acirc;n bay Nội B&agrave;i:</strong>&nbsp;185km (4 giờ &ocirc;--}}
+{{--                                                t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ th&agrave;nh phố Ninh B&igrave;nh:</strong>&nbsp;160km (4 giờ--}}
+{{--                                                &ocirc; t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ P&ugrave; Lu&ocirc;ng, Thanh H&oacute;a:</strong>&nbsp;50km (1.5--}}
+{{--                                                giờ &ocirc; t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ thị trấn Mộc Ch&acirc;u:</strong>&nbsp;90km (2 giờ &ocirc;--}}
+{{--                                                t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ s&acirc;n bay C&aacute;t Bi:</strong>&nbsp;290km (6 giờ &ocirc;--}}
+{{--                                                t&ocirc;)</p>--}}
+{{--                                            <p><strong>Từ th&agrave;nh phố Hạ Long:</strong>&nbsp;315km (6 giờ &ocirc;--}}
+{{--                                                t&ocirc;)</p>--}}
+{{--                                            <p>Gi&uacute;p bạn thuận tiện di chuyển, Avana Retreat cung cấp dịch vụ đưa--}}
+{{--                                                đ&oacute;n xe ri&ecirc;ng (c&oacute; t&iacute;nh ph&iacute;). Vui--}}
+{{--                                                l&ograve;ng gửi th&ocirc;ng tin v&agrave;o email sau để đặt xe đưa--}}
+{{--                                                đ&oacute;n cho kỳ nghỉ của bạn:&nbsp;<a--}}
+{{--                                                    href="/cdn-cgi/l/email-protection#80e9eef1f5e9f2e9e5f3c0e1f6e1eee1f2e5f4f2e5e1f4aee3efed"><span--}}
+{{--                                                        class="__cf_email__"--}}
+{{--                                                        data-cfemail="b6dfd8c7c3dfc4dfd3c5f6d7c0d7d8d7c4d3c2c4d3d7c298d5d9db">[email&#160;protected]</span></a>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="showmore-footer text-center">--}}
+{{--                                        <button class="btn showmore-btn collapsed" type="button"--}}
+{{--                                            href="#acc-s3-showmore-info-guest" data-bs-toggle="collapse"--}}
+{{--                                            aria-expanded="false" aria-controls="acc-s3-showmore-info-guest">--}}
+{{--                                            <svg class="iconsvg-chevron-double-down showmore-btn-icon">--}}
+{{--                                                <use xlink:href="/htmlv2/images/sprite.svg#chevron-double-down"></use>--}}
+{{--                                            </svg>--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </section>--}}
         </div>
 
         <script>

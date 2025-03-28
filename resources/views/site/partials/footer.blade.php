@@ -8,31 +8,32 @@
             </a>
             <div class="footer-nav nav justify-content-center mb-4 mb-md-3">
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/lien-he">Liên hệ</a>
+                    <a class="nav-link" href="/vn/lien-he">Hạng phòng</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/tu-lieu-truyen-thong.html">Tư liệu truyền thông</a>
+                    <a class="nav-link" href="/vn/tu-lieu-truyen-thong.html">Spa</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/chinh-sach-bao-mat">Chính sách bảo mật</a>
+                    <a class="nav-link" href="{{route('front.experienceService')}}">Trải nghiệm</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/dieu-khoan-su-dung">Điều khoản và điều kiện</a>
+                    <a class="nav-link" href="/vn/dieu-khoan-su-dung">Ẩm thực</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/blog">Blog</a>
+                    <a class="nav-link" href="/vn/blog">Pool & bar về khu nghỉ dưỡng</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/cau-hoi-thuong-gap">Câu hỏi thường gặp</a>
+                    <a class="nav-link" href="{{route('front.resortService')}}">Gói nghĩ dưỡng</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="https://avanaretreat.com/vn/cach-di-chuyen-den-avana-retreat">Di chuyển đến Avana Retreat</a>
+                    <a class="nav-link" href="{{route('front.promotionService')}}">Ưu đãi</a>
                 </h3>
 
             </div>
             <div class="footer-search search mb-3">
-                <form id="contact-subscribe" class="form-style-1" id="contact-form" action="https://avanaretreat.com/vn/subscribe" method="POST">
-                    <input type="hidden" name="_token" value="leyG8rCcNQPfuwVybHoKAAvj1Xu6NHHFgdVojO4B">            <input class="search-input form-control" autocomplete="off" name="email" type="text" placeholder="Your email">
+                <form id="contact-subscribe" class="form-style-1" id="contact-form" action="{{ route('front.post-contact') }}" method="POST">
+                    @csrf
+                    <input class="search-input form-control" autocomplete="off" name="email" type="text" placeholder="Your email">
                     <button class="search-btn btn btn-link" type="submit">&#8594;</button>
                 </form>
             </div>

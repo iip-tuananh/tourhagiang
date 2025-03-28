@@ -5,7 +5,7 @@
                 {{-- <svg class="iconsvg-avana">
                     <use xlink:href="{{$config->image->path}}"></use>
                 </svg> --}}
-                <img src="{{$config->image->path}}" alt="{{$config->image->name}}">
+                <img src="{{$config->image->path}}" alt="{{$config->image->name}}" loading="lazy" style="width: 100%;">
             </a>
             <button class="navbar-toggle hamburger hamburger--slider d-lg-none" id="navbar-toggle">
         <span class="hamburger-box d-block">
@@ -17,7 +17,7 @@
                     {{-- <svg class="iconsvg-avana">
                         <use xlink:href="{{$config->image->path}}"></use>
                     </svg> --}}
-                    <img src="{{$config->image->path}}" alt="{{$config->image->name}}">
+                    <img src="{{$config->image->path}}" alt="{{$config->image->name}}" loading="lazy" style="width: 100%;">
                 </a>
                 <button class="navbar-close btn d-lg-none" id="navbar-close">
                     <i class="icont-close"></i>

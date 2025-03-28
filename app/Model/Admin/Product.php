@@ -84,10 +84,10 @@ class Product extends BaseModel
         return $this->morphOne(File::class, 'model')->where('custom_field', 'image_back');
     }
 
-    public function galleries()
-    {
-        return $this->hasMany(ProductGallery::class, 'product_id', 'id');
-    }
+    // public function galleries()
+    // {
+    //     return $this->hasMany(ProductGallery::class, 'product_id', 'id');
+    // }
 
     public function product_rates()
     {

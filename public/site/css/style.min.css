@@ -16755,7 +16755,7 @@ html {
     --navbar-link-font-size: 1.125rem;
     --navbar-link-font-family: var(--bs-body-font-family);
     --navbar-link-font-weight: 500;
-    --navbar-link-color: var(--bs-white);
+    --navbar-link-color: var(--bs-primary);
     --navbar-link-bg: transparent;
     --navbar-link-hover-bg: transparent;
     --navbar-link-hover-color: #ffdfa4;
@@ -16808,7 +16808,7 @@ html {
     .navbar-collapse {
         overflow-scrolling:touch;
         -webkit-overflow-scrolling: touch;
-        background-color: var(--navbar-collapse-bg);
+        background-color: #cfcfcf;
         bottom: 0;
         display: flex;
         flex-direction: column;
@@ -21337,5 +21337,11 @@ html {
 @media (min-width: 992px) {
     .pkd-section-4 .container {
         max-width:960px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-logo {
+        width: 36% !important;
     }
 }

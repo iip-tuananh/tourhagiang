@@ -4,6 +4,7 @@ namespace App\Http\View\Composers;
 
 use App\Model\Admin\Category;
 use App\Model\Admin\Config;
+use App\Model\Admin\PostCategory;
 use App\Model\Admin\Store;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -23,6 +24,9 @@ class HeaderComposer
         // danh mục sản phẩm
         $categories = Category::query()->where('parent_id', 0)->orderBy('sort_order')->get();
 
-        $view->with(['config' => $config, 'cartItems' => $cartItems, 'totalPriceCart' => $totalPriceCart, 'categories' => $categories]);
+        // danh mục ẩm thực
+        $postsCategory = PostCategory::query()->where('parent_id', 0)->orderBy('sort_order')->get();
+
+        $view->with(['config' => $config, 'cartItems' => $cartItems, 'totalPriceCart' => $totalPriceCart, 'categories' => $categories, 'postsCategory' => $postsCategory]);
     }
 }

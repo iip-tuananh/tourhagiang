@@ -8,19 +8,16 @@
             </a>
             <div class="footer-nav nav justify-content-center mb-4 mb-md-3">
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/lien-he">Hạng phòng</a>
+                    <a class="nav-link" href="{{route('front.room-category')}}">Hạng phòng</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/tu-lieu-truyen-thong.html">Spa</a>
+                    <a class="nav-link" href="{{route('front.spa')}}">Spa</a>
                 </h3>
                 <h3 class="nav-item">
                     <a class="nav-link" href="{{route('front.experienceService')}}">Trải nghiệm</a>
                 </h3>
                 <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/dieu-khoan-su-dung">Ẩm thực</a>
-                </h3>
-                <h3 class="nav-item">
-                    <a class="nav-link" href="/vn/blog">Pool & bar về khu nghỉ dưỡng</a>
+                    <a class="nav-link" href="{{ route('front.cloudPool') }}">Pool & bar về khu nghỉ dưỡng</a>
                 </h3>
                 <h3 class="nav-item">
                     <a class="nav-link" href="{{route('front.resortService')}}">Gói nghĩ dưỡng</a>

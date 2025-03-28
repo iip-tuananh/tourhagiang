@@ -35,19 +35,15 @@
                     <li class="nav-item  dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Ẩm Thực</a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="/vn/am-thuc">Trải nghiệm ẩm thực</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/vn/am-thuc-ban-dia">Ẩm thực bản địa</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/vn/tiec-toi-rieng-tu">Tiệc tối riêng tư</a>
-                            </li>
+                            @foreach($postsCategory as $postCategory)
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('front.cuisine', ['slug' => $postCategory->slug]) }}">{{ $postCategory->name }}</a>
+                                </li>
+                            @endforeach
                         </ul>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="/vn/cloud-pool">Pool & bar về khu nghỉ dưỡng</a>
+                        <a class="nav-link " href="{{ route('front.cloudPool') }}">Pool & bar về khu nghỉ dưỡng</a>
                     </li>
                     {{-- <li class="nav-item ms-lg-auto dropdown">
                         <a class="nav-link dropdown-toggle" href="#">Về Avana</a>

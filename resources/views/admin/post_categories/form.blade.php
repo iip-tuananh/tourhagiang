@@ -1,19 +1,19 @@
 <div class="row">
     <div class="col-sm-8">
-        <div class="form-group custom-group mb-4">
-            <label class="form-label">Danh mục cấp cha</label>
-            <ui-select class="" remove-selected="true" ng-model="form.parent_id" theme="select2">
-                <ui-select-match placeholder="Chọn danh mục">
-                    <% $select.selected.name %>
-                </ui-select-match>
-                <ui-select-choices repeat="t.id as t in (form.all_categories | filter: $select.search)">
-                    <span ng-bind="t.name"></span>
-                </ui-select-choices>
-            </ui-select>
-            <span class="invalid-feedback d-block" role="alert">
-                <strong><% errors.parent_id[0] %></strong>
-            </span>
-        </div>
+{{--        <div class="form-group custom-group mb-4">--}}
+{{--            <label class="form-label">Danh mục cấp cha</label>--}}
+{{--            <ui-select class="" remove-selected="true" ng-model="form.parent_id" theme="select2">--}}
+{{--                <ui-select-match placeholder="Chọn danh mục">--}}
+{{--                    <% $select.selected.name %>--}}
+{{--                </ui-select-match>--}}
+{{--                <ui-select-choices repeat="t.id as t in (form.all_categories | filter: $select.search)">--}}
+{{--                    <span ng-bind="t.name"></span>--}}
+{{--                </ui-select-choices>--}}
+{{--            </ui-select>--}}
+{{--            <span class="invalid-feedback d-block" role="alert">--}}
+{{--                <strong><% errors.parent_id[0] %></strong>--}}
+{{--            </span>--}}
+{{--        </div>--}}
 
         <div class="form-group custom-group mb-4">
             <label class="form-label required-label">Tên danh mục</label>

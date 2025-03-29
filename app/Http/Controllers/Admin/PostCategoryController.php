@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Admin\Post;
 use App\Model\Admin\PostCategory;
 use Illuminate\Http\Request;
 use App\Model\Admin\PostCategory as ThisModel;
@@ -45,10 +46,10 @@ class PostCategoryController extends Controller
 					$level = 0;
 				}
                 $i++;
-                DB::table('post_categories')->where('id',$row['id'])->update(['parent_id' => $row['parentID'], 'sort_order' => $i, 'level' => $level]);
+                DB::table('post_categories')->where('id',$row['id'])->update(['sort_order' => $i]);
             }
 			$json->success = true;
-			$json->message = "Xắp xếp thành công";
+			$json->message = "Sắp xếp thành công";
 			return Response::json($json);
         }
     }
@@ -277,7 +278,7 @@ class PostCategoryController extends Controller
 		$object = ThisModel::findOrFail($id);
 		if (!$object->canDelete()) {
 			$message = array(
-				"message" => "Không thể xóa!",
+				"message" => "Không thể xóa. Đã có bài viết đã sử dụng danh mục này!",
 				"alert-type" => "warning"
 			);
 		} else {
@@ -285,6 +286,7 @@ class PostCategoryController extends Controller
 				FileHelper::deleteFileFromCloudflare($object->image, $object->id, ThisModel::class, 'image');
 			}
 			$object->delete();
+
 			$message = array(
 				"message" => "Thao tác thành công!",
 				"alert-type" => "success"

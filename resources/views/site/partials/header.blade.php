@@ -1,4 +1,4 @@
-<header class="header header-headroom {{ Route::currentRouteName() == 'front.promotionService' || Route::currentRouteName() == 'front.experienceService' || Route::currentRouteName() == 'front.resortService' ? 'header-fixed' : ''}}" id="header">
+<header class="header header-headroom {{ Route::currentRouteName() == 'front.promotionService' || Route::currentRouteName() == 'front.experienceService' || Route::currentRouteName() == 'front.resortService' || Route::currentRouteName() == 'front.bookingRoom' ? 'header-fixed' : ''}}" id="header">
     <nav class="header-navbar navbar navbar-expand-lg" id="navbar">
         <div class="container">
             <a class="header-logo" href="{{route('front.home-page')}}">
@@ -73,7 +73,7 @@
                 </ul>
                 <!-- for mobile (cta, socials, language)-->
                 <div class="navbar-bottom d-lg-none">
-                    <a class="btn btn-cta btn-primary-2 mb-4" href="#" role="button">Đặt phòng</a>
+                    <a class="btn btn-cta btn-primary-2 mb-4" href="{{ route('front.bookingRoom') }}" role="button">Đặt phòng</a>
                     <div class="navbar-social social mb-5">
                         <a class="social-item" target="_blank" href="https://www.facebook.com/avanaretreat/">
                             <svg class="iconsvg-facebook">
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-cta btn-primary-2 header-cta ms-2 ms-xl-3" href="#" role="button">Đặt phòng
+            <a class="btn btn-cta btn-primary-2 header-cta ms-2 ms-xl-3" href="{{ route('front.bookingRoom') }}" role="button">Đặt phòng
                 <!-- <br class="d-lg-none"> your stay -->
             </a>
         </div>

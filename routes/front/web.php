@@ -16,6 +16,7 @@ Route::group(['namespace' => 'Front'], function () {
     Route::get('/trai-nghiem.html','FrontController@experienceService')->name('front.experienceService');
     Route::get('/goi-nghi-duong.html','FrontController@resortService')->name('front.resortService');
     Route::get('/goi-nghi-duong/{slug}.html','FrontController@detailResortService')->name('front.detailResortService');
+    Route::get('/dat-phong.html','FrontController@bookingRoom')->name('front.bookingRoom');
 
     Route::get('/getServiceTab','FrontController@getServiceTab')->name('front.getServiceTab');
 

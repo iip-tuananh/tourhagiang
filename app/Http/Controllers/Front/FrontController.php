@@ -170,6 +170,10 @@ class FrontController extends Controller
         return view('site.chi_tiet_goi_dich_vu', compact('service'));
     }
 
+    public function bookingRoom() {
+        return view('site.booking');
+    }
+
     public function getServiceTab(Request $request) {
         $type = $request->get('type');
         $slug = $request->get('slug');
